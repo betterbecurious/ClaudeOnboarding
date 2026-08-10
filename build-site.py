@@ -251,6 +251,28 @@ def render(lines, heading_offset=1, slug_prefix=""):
 # Source parsing
 # --------------------------------------------------------------------------
 
+def outline(lines):
+    """The page's `##` headings in order, as (slug_suffix, text) pairs.
+
+    Feeds the nested sidebar outline. A course page is long and there are no
+    section numbers to count, so the sidebar is how a reader sees where they
+    are. Slugging has to match render() exactly or the anchors miss.
+    """
+    out, in_fence = [], False
+    for line in lines:
+        s = line.strip()
+        if s.startswith("```"):
+            in_fence = not in_fence
+            continue
+        if in_fence:
+            continue
+        m = re.match(r"^##\s+([^#].*)$", s)
+        if m:
+            text = m.group(1)
+            out.append((re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-"), text))
+    return out
+
+
 def load_page(path, slug):
     """Read a course page: title, competencies, body lines (chrome stripped)."""
     raw = path.read_text(encoding="utf-8").split("\n")
@@ -274,6 +296,7 @@ def load_page(path, slug):
     # offset 1: the page's "## What this is about" becomes h3 under the
     # station's h2.
     return {"slug": slug, "title": title, "comps": comps, "pending": None,
+            "outline": outline(body),
             "html": render(body, heading_offset=1, slug_prefix=slug + "-")}
 
 
@@ -287,7 +310,7 @@ def load_course():
             pages.append(load_page(path, slug))
         elif "pending" in entry:
             pages.append({"slug": slug, "title": entry["nav"], "comps": [],
-                          "pending": entry["pending"], "html": ""})
+                          "pending": entry["pending"], "outline": [], "html": ""})
         else:
             sys.exit("error: docs/%s.md is missing and has no `pending` line "
                      "in COURSE" % slug)
@@ -361,6 +384,15 @@ body{
 .sidebar a.nav.active{color:var(--accent);border-left-color:var(--accent);font-weight:550}
 .sidebar a.nav.soon{color:var(--ink-3);font-style:italic}
 .sidebar a.nav.soon:hover{color:var(--ink-2)}
+/* Nested outline. Only the station you are currently inside is expanded --
+   all six at once is a wall of links and defeats the purpose. */
+.sidebar .sub{display:none}
+.sidebar .item.open > .sub{display:block}
+.sidebar .item.open > a.nav{color:var(--ink);font-weight:600}
+.sidebar a.nav.sub-link{padding-left:1.4rem;font-size:.78rem;color:var(--ink-3);
+  border-left-color:transparent}
+.sidebar a.nav.sub-link:hover{color:var(--ink-2)}
+.sidebar a.nav.sub-link.active{color:var(--accent);border-left-color:var(--accent)}
 .sidebar .foot{margin-top:2rem;padding-top:1rem;border-top:1px solid var(--rule);
   font-size:.72rem;color:var(--ink-3);line-height:1.5}
 .sidebar .foot a{color:var(--ink-3)}
@@ -457,11 +489,22 @@ footer .reviewed{font-weight:600;color:var(--ink-2)}
 """
 
 JS = r"""
-/* Scroll-spy. Nav order and document order are not identical -- the
-   "What this course is not" link points into the intro page -- so targets are
-   sorted by document position before the first-visible scan. */
+/* Scroll-spy.
+
+   The reference repo used "first target intersecting the top band". That
+   cannot work here: a station <section> spans the whole station, so it is
+   always intersecting and always wins over the heading inside it -- the
+   outline would never highlight, which is the whole reason it exists.
+
+   So: track the LAST target whose top has passed a notional reading line.
+   Inside a station that is always the current heading, because headings come
+   after their section in document order. The station itself is then marked by
+   expanding it, not by highlighting it. */
 (function(){
+  var side = document.querySelector(".sidebar");
   var links = [].slice.call(document.querySelectorAll(".sidebar a.nav"));
+  if (!side || !links.length) return;
+
   var map = {};
   links.forEach(function(l){ map[l.getAttribute("href").slice(1)] = l; });
   var targets = Object.keys(map)
@@ -472,22 +515,49 @@ JS = r"""
     });
   if (!targets.length) return;
 
-  var visible = {};
-  var obs = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){ visible[e.target.id] = e.isIntersecting; });
-    var current = null;
-    for (var i = 0; i < targets.length; i++){
-      if (visible[targets[i].id]){ current = targets[i].id; break; }
-    }
-    if (!current) return;
-    links.forEach(function(l){ l.classList.remove("active"); });
-    if (map[current]){
-      map[current].classList.add("active");
-      map[current].scrollIntoView({block:"nearest"});
-    }
-  }, {rootMargin:"0px 0px -70% 0px", threshold:0});
+  var LINE = 120;      /* px below the viewport top */
+  var last = null;
 
-  targets.forEach(function(t){ obs.observe(t); });
+  function sync(){
+    var current = targets[0];
+    for (var i = 0; i < targets.length; i++){
+      if (targets[i].getBoundingClientRect().top <= LINE) current = targets[i];
+    }
+    if (current === last) return;
+    last = current;
+
+    var link = map[current.id];
+    links.forEach(function(l){ l.classList.remove("active"); });
+    if (!link) return;
+    link.classList.add("active");
+
+    /* Expand the station this heading belongs to, collapse the rest. */
+    var item = link.closest(".item");
+    [].slice.call(document.querySelectorAll(".sidebar .item.open"))
+      .forEach(function(i){ if (i !== item) i.classList.remove("open"); });
+    if (item) item.classList.add("open");
+
+    /* Keep the active link in view by scrolling the sidebar only. Calling
+       scrollIntoView here would be free to scroll the window and fight the
+       reader's own scrolling. */
+    var lr = link.getBoundingClientRect(), sr = side.getBoundingClientRect();
+    if (lr.top < sr.top + 8) side.scrollTop += lr.top - sr.top - 8;
+    else if (lr.bottom > sr.bottom - 8) side.scrollTop += lr.bottom - sr.bottom + 8;
+  }
+
+  var queued = false;
+  function onScroll(){
+    if (queued) return;
+    queued = true;
+    requestAnimationFrame(function(){ queued = false; sync(); });
+  }
+  window.addEventListener("scroll", onScroll, {passive:true});
+  window.addEventListener("resize", onScroll, {passive:true});
+  /* A shared deep link (#01-the-interview-the-worked-example) is scrolled by
+     the browser after this script runs, so sync once more on arrival. */
+  window.addEventListener("hashchange", onScroll);
+  window.addEventListener("load", onScroll);
+  sync();
 })();
 """
 
@@ -504,11 +574,17 @@ def build():
            '<span>A course in five stations</span></a>', "<nav>"]
     nav.append('<div class="group">The course</div>')
     for p in pages:
+        nav.append('<div class="item" data-station="%s">' % p["slug"])
         nav.append('<a class="nav%s" href="#%s">%s</a>' % (
             " soon" if p["pending"] else "", p["slug"], html.escape(p["title"])))
+        if p["outline"]:
+            nav.append('<div class="sub">')
+            for suffix, text in p["outline"]:
+                nav.append('<a class="nav sub-link" href="#%s-%s">%s</a>'
+                           % (p["slug"], suffix, html.escape(text)))
+            nav.append("</div>")
+        nav.append("</div>")
     nav.append('<div class="group">About the course</div>')
-    nav.append('<a class="nav" href="#00-intro-what-this-course-is-not">'
-               "What this course is not</a>")
     nav.append('<a class="nav" href="#freshness">Freshness</a>')
     nav.append('<a class="nav" href="#about">Author &amp; license</a>')
     nav.append("</nav>")

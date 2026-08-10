@@ -2,6 +2,20 @@
 
 What changed, when, and why. Review entries are logged even when nothing changed — "reviewed, no changes" is information.
 
+## 2026-08-10 — One numbered spine
+
+**Fixed** — three independent numbering schemes were running at once and two of them collided. Stations counted 1–5, the loop in `docs/00-intro.md` counted 1–6, and Station 1's own sections counted 1–5. The two 1–5 sequences meant different things and did not correspond: Station 1's "3. The worked example" was loop step 2, its "5. Try it yourself" was loop step 3, and its "4. Don't believe it — check it" was not a loop step at all, while loop step 4 ("Check") was the unnumbered "How you'll know it's good" further down. A reader using the numbers to locate themselves was actively misled.
+
+**The rule now: the station is the only number in the course. Everything else is named.** This follows the section skeleton `applied-ai-operations` already uses on its pages.
+
+- `docs/00-intro.md` — the six-step numbered loop became a named skeleton, listing the headings that recur in every station. States the one-number rule explicitly.
+- `docs/01-the-interview.md` — dropped `1.`–`5.` from the section headings. The two order-independent numbered lists (the five ways to provoke an error, the five checkpoints) became bullets, removing two further competing 1–5 sequences. Only "Pass 1–4" survives, and it is a local sequence with a distinct noun.
+- `docs/01-the-interview.md` — "Don't believe it — check it" became "Don't believe it — **interrogate** it". Two adjacent sections were both called some form of *check*: interrogating Claude's output, and checking your own guide. Renaming one separates them.
+- `docs/01-the-interview.md` — the cross-reference "that is exactly why section 4 …" pointed at a number that no longer exists; it now names the section.
+- `build-site.py` — the sidebar gained a nested outline of each station's `##` headings. Only the station you are currently inside is expanded; all six at once is a wall of links. Position is now something you see rather than something you count.
+- `build-site.py` — the scroll-spy rule changed from "first target intersecting the top band" to "last target whose top has passed the reading line". The old rule could not highlight a heading at all, because a station's `<section>` spans the whole station and always won over the headings inside it. It also now syncs on `hashchange` and `load`, so a shared deep link highlights on arrival, and it scrolls only the sidebar rather than calling `scrollIntoView`, which was free to fight the reader's own scrolling.
+- `build-site.py` — the *About the course* group lost its "What this course is not" link. That heading now appears in the introduction's own outline, and having it in both places put a duplicate id in the scroll-spy's lookup map.
+
 ## 2026-08-10 — Initial scaffold
 
 **Added**

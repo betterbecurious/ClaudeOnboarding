@@ -30,16 +30,21 @@ There are no technical prerequisites. There is one substantive prerequisite: you
 
 ## How you work with it
 
-Every station follows the same loop:
+Every station has the same skeleton, and you can always tell where you are from the heading rather than from a number. **The only number in this course is the station you are on.**
 
-1. **The brief** — what you should be able to do at the end
-2. **The worked example** — one example carried all the way through, complete
-3. **Try it yourself** — on material that is given to you
-4. **Check** — how you can tell whether it was any good
-5. **On your own material** — the part that counts
-6. **What you keep** — something you hold on to and can show
+These headings appear in every station, in this order:
 
-Step 5 is not optional. Anyone who only clicks through the examples has watched.
+- **What you can do afterwards** — the brief, at the top
+- **The worked example** — one case carried all the way through, complete
+- **Try it yourself** — on material that is given to you
+- **How you'll know it's good** — the check, with a review instruction you hand to Claude
+- **On your own material** — the part that counts
+- **What goes wrong** — the mistakes to expect, so you recognise them in your own work
+- **What you keep** — something you hold on to and can show
+
+Between them sit the sections belonging to that station alone — in Station 1, working out what you actually hand over, and how to write an interview guide.
+
+**On your own material** is not optional. Anyone who only clicks through the examples has watched.
 
 ### Feedback without an instructor
 

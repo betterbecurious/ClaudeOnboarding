@@ -26,7 +26,7 @@ Put paper in front of you and have one real, uncritical document from your every
 
 ---
 
-## 1. What are you actually handing over?
+## What are you actually handing over?
 
 Write down what you did **last week**. And write it so that somebody could have watched you do it: verbs, not abstract nouns.
 
@@ -59,7 +59,7 @@ If your left column is nearly empty and your middle one nearly full: normal. Amo
 
 ---
 
-## 2. The interview guide
+## The interview guide
 
 ### The named knowledge
 
@@ -91,7 +91,7 @@ The rest is for developers, or rarely needed.
 
 ---
 
-## 3. The worked example
+## The worked example
 
 An invented company, a real procedure. **Hartmann Verpackungstechnik GmbH**, 40 employees, family-owned, makes folding cartons. Customer: **Nordfrucht GmbH**, six years. One delivery is unusable.
 
@@ -177,15 +177,15 @@ Now it sounds like Andrea Hartmann. Short sentences, direct address, the phone-c
 
 ---
 
-## 4. Don't believe it — check it
+## Don't believe it — interrogate it
 
 Take your own document and actively try to get Claude to make a mistake. Five types:
 
-1. **Ask for something that isn't in there.** Does it say "that isn't in the document", or does it invent?
-2. **Build in a false premise.** "Why is the notice period in clause 7 six months?" — when the clause says something else.
-3. **Ask where it says that** — and then actually go and look.
-4. **Ask the same question twice, worded differently.** Do you get the same answer twice?
-5. **Ask for something outside the material.** A figure, a date, a person it cannot know.
+- **Ask for something that isn't in there.** Does it say "that isn't in the document", or does it invent?
+- **Build in a false premise.** "Why is the notice period in clause 7 six months?" — when the clause says something else.
+- **Ask where it says that** — and then actually go and look.
+- **Ask the same question twice, worded differently.** Do you get the same answer twice?
+- **Ask for something outside the material.** A figure, a date, a person it cannot know.
 
 Out of that come the three habits:
 
@@ -199,7 +199,7 @@ Out of that come the three habits:
 
 ---
 
-## 5. Try it yourself
+## Try it yourself
 
 Write an interview guide for **one of your three marked rows**. Four parts, on paper or in an editor.
 
@@ -214,11 +214,11 @@ Example:
 
 Check it against these five points before you ask anyone:
 
-1. Is there anything in the **Background data** that Claude could not possibly know? If not, you have not supplied context — you have restated the task.
-2. Are the **rules checkable** — numbers, limits, formats — or are they adjectives?
-3. Is the **example real**, from your own house? An invented example teaches the wrong tone.
-4. Have you written anywhere **how** Claude should think? Cut it.
-5. Is the **long material at the top** and your question at the bottom?
+- Is there anything in the **Background data** that Claude could not possibly know? If not, you have not supplied context — you have restated the task.
+- Are the **rules checkable** — numbers, limits, formats — or are they adjectives?
+- Is the **example real**, from your own house? An invented example teaches the wrong tone.
+- Have you written anywhere **how** Claude should think? Cut it.
+- Is the **long material at the top** and your question at the bottom?
 
 ### Getting feedback
 
@@ -259,7 +259,7 @@ Apply the same guide three times to different material of your own, and note wha
 
 **No example.** The part almost everybody leaves out, and the one that changes the tone most.
 
-**The fluency error.** A fluently written answer is taken for a correct one. That is exactly why section 4 is not at the end but part of the routine.
+**The fluency error.** A fluently written answer is taken for a correct one. That is exactly why **Don't believe it — interrogate it** sits in the middle of this station rather than at the end: it belongs to the routine, not to the final inspection.
 
 ## What you keep
 

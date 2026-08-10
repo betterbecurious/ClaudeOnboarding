@@ -60,6 +60,15 @@ body{
 .sidebar a.nav.active{color:var(--accent);border-left-color:var(--accent);font-weight:550}
 .sidebar a.nav.soon{color:var(--ink-3);font-style:italic}
 .sidebar a.nav.soon:hover{color:var(--ink-2)}
+/* Nested outline. Only the station you are currently inside is expanded --
+   all six at once is a wall of links and defeats the purpose. */
+.sidebar .sub{display:none}
+.sidebar .item.open > .sub{display:block}
+.sidebar .item.open > a.nav{color:var(--ink);font-weight:600}
+.sidebar a.nav.sub-link{padding-left:1.4rem;font-size:.78rem;color:var(--ink-3);
+  border-left-color:transparent}
+.sidebar a.nav.sub-link:hover{color:var(--ink-2)}
+.sidebar a.nav.sub-link.active{color:var(--accent);border-left-color:var(--accent)}
 .sidebar .foot{margin-top:2rem;padding-top:1rem;border-top:1px solid var(--rule);
   font-size:.72rem;color:var(--ink-3);line-height:1.5}
 .sidebar .foot a{color:var(--ink-3)}
@@ -159,14 +168,47 @@ footer .reviewed{font-weight:600;color:var(--ink-2)}
 <aside class="sidebar"><a class="brand" href="#top">Claude, your new Employee<span>A course in five stations</span></a>
 <nav>
 <div class="group">The course</div>
+<div class="item" data-station="00-intro">
 <a class="nav" href="#00-intro">Introduction</a>
+<div class="sub">
+<a class="nav sub-link" href="#00-intro-what-this-is-about">What this is about</a>
+<a class="nav sub-link" href="#00-intro-what-this-course-is-not">What this course is not</a>
+<a class="nav sub-link" href="#00-intro-who-it-s-for">Who it&#x27;s for</a>
+<a class="nav sub-link" href="#00-intro-how-you-work-with-it">How you work with it</a>
+<a class="nav sub-link" href="#00-intro-what-you-need">What you need</a>
+<a class="nav sub-link" href="#00-intro-the-four-competencies">The four competencies</a>
+</div>
+</div>
+<div class="item" data-station="01-the-interview">
 <a class="nav" href="#01-the-interview">Station 1 — The Interview</a>
+<div class="sub">
+<a class="nav sub-link" href="#01-the-interview-what-this-is-about">What this is about</a>
+<a class="nav sub-link" href="#01-the-interview-what-you-can-do-afterwards">What you can do afterwards</a>
+<a class="nav sub-link" href="#01-the-interview-before-you-start">Before you start</a>
+<a class="nav sub-link" href="#01-the-interview-what-are-you-actually-handing-over">What are you actually handing over?</a>
+<a class="nav sub-link" href="#01-the-interview-the-interview-guide">The interview guide</a>
+<a class="nav sub-link" href="#01-the-interview-the-worked-example">The worked example</a>
+<a class="nav sub-link" href="#01-the-interview-don-t-believe-it-interrogate-it">Don&#x27;t believe it — interrogate it</a>
+<a class="nav sub-link" href="#01-the-interview-try-it-yourself">Try it yourself</a>
+<a class="nav sub-link" href="#01-the-interview-how-you-ll-know-it-s-good">How you&#x27;ll know it&#x27;s good</a>
+<a class="nav sub-link" href="#01-the-interview-on-your-own-material">On your own material</a>
+<a class="nav sub-link" href="#01-the-interview-what-goes-wrong">What goes wrong</a>
+<a class="nav sub-link" href="#01-the-interview-what-you-keep">What you keep</a>
+</div>
+</div>
+<div class="item" data-station="02-onboarding">
 <a class="nav soon" href="#02-onboarding">Station 2 — The Onboarding</a>
+</div>
+<div class="item" data-station="03-first-day">
 <a class="nav soon" href="#03-first-day">Station 3 — The First Real Day</a>
+</div>
+<div class="item" data-station="04-tools-and-access">
 <a class="nav soon" href="#04-tools-and-access">Station 4 — Tools and Access</a>
+</div>
+<div class="item" data-station="05-promotion">
 <a class="nav soon" href="#05-promotion">Station 5 — Promotion to Team Lead</a>
+</div>
 <div class="group">About the course</div>
-<a class="nav" href="#00-intro-what-this-course-is-not">What this course is not</a>
 <a class="nav" href="#freshness">Freshness</a>
 <a class="nav" href="#about">Author &amp; license</a>
 </nav>
@@ -194,9 +236,11 @@ footer .reviewed{font-weight:600;color:var(--ink-2)}
 <ul><li>People in small and mid-sized businesses who need work to get done</li><li>Managers who have to decide whether this is worth it</li><li>Anyone who has already tried it and came away disappointed</li></ul>
 <p>There are no technical prerequisites. There is one substantive prerequisite: you need a task of your own that you want to work on. Without it, everything here stays a demonstration.</p>
 <h3 id="00-intro-how-you-work-with-it">How you work with it</h3>
-<p>Every station follows the same loop:</p>
-<ol><li><strong>The brief</strong> — what you should be able to do at the end</li><li><strong>The worked example</strong> — one example carried all the way through, complete</li><li><strong>Try it yourself</strong> — on material that is given to you</li><li><strong>Check</strong> — how you can tell whether it was any good</li><li><strong>On your own material</strong> — the part that counts</li><li><strong>What you keep</strong> — something you hold on to and can show</li></ol>
-<p>Step 5 is not optional. Anyone who only clicks through the examples has watched.</p>
+<p>Every station has the same skeleton, and you can always tell where you are from the heading rather than from a number. <strong>The only number in this course is the station you are on.</strong></p>
+<p>These headings appear in every station, in this order:</p>
+<ul><li><strong>What you can do afterwards</strong> — the brief, at the top</li><li><strong>The worked example</strong> — one case carried all the way through, complete</li><li><strong>Try it yourself</strong> — on material that is given to you</li><li><strong>How you'll know it's good</strong> — the check, with a review instruction you hand to Claude</li><li><strong>On your own material</strong> — the part that counts</li><li><strong>What goes wrong</strong> — the mistakes to expect, so you recognise them in your own work</li><li><strong>What you keep</strong> — something you hold on to and can show</li></ul>
+<p>Between them sit the sections belonging to that station alone — in Station 1, working out what you actually hand over, and how to write an interview guide.</p>
+<p><strong>On your own material</strong> is not optional. Anyone who only clicks through the examples has watched.</p>
 <h4 id="00-intro-feedback-without-an-instructor">Feedback without an instructor</h4>
 <p>This course is about Claude, so Claude is also the marker. Every station comes with a review instruction that you copy and hand to Claude along with your result. It is written to <strong>criticise rather than solve</strong> — it tells you which part is thin and why, and does not rewrite it for you.</p>
 <h3 id="00-intro-what-you-need">What you need</h3>
@@ -218,7 +262,7 @@ footer .reviewed{font-weight:600;color:var(--ink-2)}
 <ul><li>Pull out of your own week the tasks that are candidates at all</li><li>Hand over a task in a way that produces a usable result</li><li>Check an answer instead of believing it</li></ul>
 <h3 id="01-the-interview-before-you-start">Before you start</h3>
 <p>Put paper in front of you and have one real, uncritical document from your everyday work ready — a quote, a report, an extract from a manual, a contract with no personal data in it.</p>
-<h3 id="01-the-interview-1-what-are-you-actually-handing-over">1. What are you actually handing over?</h3>
+<h3 id="01-the-interview-what-are-you-actually-handing-over">What are you actually handing over?</h3>
 <p>Write down what you did <strong>last week</strong>. And write it so that somebody could have watched you do it: verbs, not abstract nouns.</p>
 <ul><li>❌ "Progressed the company formation"</li><li>✅ "Read through the draft articles of association"</li></ul>
 <p>That precision is not pedantry. Intentions cannot be broken into parts; activities can. Anyone who writes down project names gets stuck at the sorting stage and wrongly takes that for a problem with their profession.</p>
@@ -229,7 +273,7 @@ footer .reviewed{font-weight:600;color:var(--ink-2)}
 <blockquote><p><strong>You are not handing over the decision. You are handing over the groundwork.</strong></p></blockquote>
 <p>If your left column is nearly empty and your middle one nearly full: normal. Among the self-employed and in management that is the rule. It does not mean there is nothing here for you.</p>
 <p><strong>Mark exactly three rows.</strong> No more. Without a limit you write down your entire profession and take away nothing concrete. Choosing is the exercise.</p>
-<h3 id="01-the-interview-2-the-interview-guide">2. The interview guide</h3>
+<h3 id="01-the-interview-the-interview-guide">The interview guide</h3>
 <h4 id="01-the-interview-the-named-knowledge">The named knowledge</h4>
 <p>Anthropic lists the components of a prompt individually, with a recommended order:</p>
 <p><em>Task context · Tone context · Background data · Detailed task description and rules · Examples · Conversation history · Immediate task · Think step by step · Output formatting · Prefilled response</em></p>
@@ -241,7 +285,7 @@ footer .reviewed{font-weight:600;color:var(--ink-2)}
 <blockquote><p><strong>Context is what Claude could not possibly know. Hand-holding is how it should think.</strong></p></blockquote>
 <p>"Reply professionally and empathetically in three paragraphs" is hand-holding — in an interview that is the equivalent of instructing someone to look friendly. It costs space and changes little.</p>
 <p>"The customer has been with us for six years, our goodwill limit is X, this is how we answered comparable cases" is context, and it changes everything.</p>
-<h3 id="01-the-interview-3-the-worked-example">3. The worked example</h3>
+<h3 id="01-the-interview-the-worked-example">The worked example</h3>
 <p>An invented company, a real procedure. <strong>Hartmann Verpackungstechnik GmbH</strong>, 40 employees, family-owned, makes folding cartons. Customer: <strong>Nordfrucht GmbH</strong>, six years. One delivery is unusable.</p>
 <p>The customer's email:</p>
 <blockquote><p>Dear Sir or Madam, the delivery that arrived today (order 24-1187) is unusable. The print register is visibly out of alignment and the cartons will not fold up cleanly on our line. We have had to stop packing. We expect a complete replacement and a statement on how you intend to settle the downtime. Our delivery date to the retail chain is Friday. Kind regards, M. Brandt, Nordfrucht GmbH</p></blockquote>
@@ -291,13 +335,13 @@ Kind regards, Andrea Hartmann, Sales&quot;</code></pre>
 <h4 id="01-the-interview-two-moves-that-have-nothing-to-do-with-wording">Two moves that have nothing to do with wording</h4>
 <p><strong>Order.</strong> Long documents at the beginning, your question at the end. Anthropic reports up to 30 % better answer quality in tests for this, especially with several documents. Checkable, immediately applicable — and the opposite of prompt magic.</p>
 <p><strong>Brevity.</strong> The smallest prompt that works is the best one. Anthropic explicitly recommends against over-engineering.</p>
-<h3 id="01-the-interview-4-don-t-believe-it-check-it">4. Don't believe it — check it</h3>
+<h3 id="01-the-interview-don-t-believe-it-interrogate-it">Don't believe it — interrogate it</h3>
 <p>Take your own document and actively try to get Claude to make a mistake. Five types:</p>
-<ol><li><strong>Ask for something that isn't in there.</strong> Does it say "that isn't in the document", or does it invent?</li><li><strong>Build in a false premise.</strong> "Why is the notice period in clause 7 six months?" — when the clause says something else.</li><li><strong>Ask where it says that</strong> — and then actually go and look.</li><li><strong>Ask the same question twice, worded differently.</strong> Do you get the same answer twice?</li><li><strong>Ask for something outside the material.</strong> A figure, a date, a person it cannot know.</li></ol>
+<ul><li><strong>Ask for something that isn't in there.</strong> Does it say "that isn't in the document", or does it invent?</li><li><strong>Build in a false premise.</strong> "Why is the notice period in clause 7 six months?" — when the clause says something else.</li><li><strong>Ask where it says that</strong> — and then actually go and look.</li><li><strong>Ask the same question twice, worded differently.</strong> Do you get the same answer twice?</li><li><strong>Ask for something outside the material.</strong> A figure, a date, a person it cannot know.</li></ul>
 <p>Out of that come the three habits:</p>
 <div class="table-wrap"><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Cite it</strong></td><td>Where does it say that?</td></tr><tr><td><strong>Cross-check</strong></td><td>Again, asked differently</td></tr><tr><td><strong>Spot-check</strong></td><td>Actually verify one item, rather than trusting the whole</td></tr></tbody></table></div>
 <blockquote><p>A confidently worded error is more dangerous than an obvious one.</p></blockquote>
-<h3 id="01-the-interview-5-try-it-yourself">5. Try it yourself</h3>
+<h3 id="01-the-interview-try-it-yourself">Try it yourself</h3>
 <p>Write an interview guide for <strong>one of your three marked rows</strong>. Four parts, on paper or in an editor.</p>
 <pre><code>Task context:
 Background data:
@@ -305,7 +349,7 @@ Task and rules:
 Example:</code></pre>
 <h3 id="01-the-interview-how-you-ll-know-it-s-good">How you'll know it's good</h3>
 <p>Check it against these five points before you ask anyone:</p>
-<ol><li>Is there anything in the <strong>Background data</strong> that Claude could not possibly know? If not, you have not supplied context — you have restated the task.</li><li>Are the <strong>rules checkable</strong> — numbers, limits, formats — or are they adjectives?</li><li>Is the <strong>example real</strong>, from your own house? An invented example teaches the wrong tone.</li><li>Have you written anywhere <strong>how</strong> Claude should think? Cut it.</li><li>Is the <strong>long material at the top</strong> and your question at the bottom?</li></ol>
+<ul><li>Is there anything in the <strong>Background data</strong> that Claude could not possibly know? If not, you have not supplied context — you have restated the task.</li><li>Are the <strong>rules checkable</strong> — numbers, limits, formats — or are they adjectives?</li><li>Is the <strong>example real</strong>, from your own house? An invented example teaches the wrong tone.</li><li>Have you written anywhere <strong>how</strong> Claude should think? Cut it.</li><li>Is the <strong>long material at the top</strong> and your question at the bottom?</li></ul>
 <h4 id="01-the-interview-getting-feedback">Getting feedback</h4>
 <p>Copy your guide, together with this instruction, into a new chat:</p>
 <pre><code>You are the marker on a course. Below is a briefing written by a participant,
@@ -331,7 +375,7 @@ Here is the briefing:</code></pre>
 <p><strong>Stopping at pass 1.</strong> The first answer looks respectable. Respectable and sendable are two different things.</p>
 <p><strong>Adjectives as rules.</strong> "Professional", "customer-focused", "appropriate" are not checkable. "150 words maximum" is.</p>
 <p><strong>No example.</strong> The part almost everybody leaves out, and the one that changes the tone most.</p>
-<p><strong>The fluency error.</strong> A fluently written answer is taken for a correct one. That is exactly why section 4 is not at the end but part of the routine.</p>
+<p><strong>The fluency error.</strong> A fluently written answer is taken for a correct one. That is exactly why <strong>Don't believe it — interrogate it</strong> sits in the middle of this station rather than at the end: it belongs to the routine, not to the final inspection.</p>
 <h3 id="01-the-interview-what-you-keep">What you keep</h3>
 <ul><li>Your list: last week, sorted, three rows marked</li><li>One completed interview guide</li><li>The three checking habits</li></ul>
 <p>That is what you take into Station 2 — where the guide becomes something permanent.</p>
@@ -376,11 +420,22 @@ This page is generated from it by <code>build-site.py</code>; where they disagre
 </footer>
 </main>
 </div>
-<script>/* Scroll-spy. Nav order and document order are not identical -- the
-   "What this course is not" link points into the intro page -- so targets are
-   sorted by document position before the first-visible scan. */
+<script>/* Scroll-spy.
+
+   The reference repo used "first target intersecting the top band". That
+   cannot work here: a station <section> spans the whole station, so it is
+   always intersecting and always wins over the heading inside it -- the
+   outline would never highlight, which is the whole reason it exists.
+
+   So: track the LAST target whose top has passed a notional reading line.
+   Inside a station that is always the current heading, because headings come
+   after their section in document order. The station itself is then marked by
+   expanding it, not by highlighting it. */
 (function(){
+  var side = document.querySelector(".sidebar");
   var links = [].slice.call(document.querySelectorAll(".sidebar a.nav"));
+  if (!side || !links.length) return;
+
   var map = {};
   links.forEach(function(l){ map[l.getAttribute("href").slice(1)] = l; });
   var targets = Object.keys(map)
@@ -391,22 +446,49 @@ This page is generated from it by <code>build-site.py</code>; where they disagre
     });
   if (!targets.length) return;
 
-  var visible = {};
-  var obs = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){ visible[e.target.id] = e.isIntersecting; });
-    var current = null;
-    for (var i = 0; i < targets.length; i++){
-      if (visible[targets[i].id]){ current = targets[i].id; break; }
-    }
-    if (!current) return;
-    links.forEach(function(l){ l.classList.remove("active"); });
-    if (map[current]){
-      map[current].classList.add("active");
-      map[current].scrollIntoView({block:"nearest"});
-    }
-  }, {rootMargin:"0px 0px -70% 0px", threshold:0});
+  var LINE = 120;      /* px below the viewport top */
+  var last = null;
 
-  targets.forEach(function(t){ obs.observe(t); });
+  function sync(){
+    var current = targets[0];
+    for (var i = 0; i < targets.length; i++){
+      if (targets[i].getBoundingClientRect().top <= LINE) current = targets[i];
+    }
+    if (current === last) return;
+    last = current;
+
+    var link = map[current.id];
+    links.forEach(function(l){ l.classList.remove("active"); });
+    if (!link) return;
+    link.classList.add("active");
+
+    /* Expand the station this heading belongs to, collapse the rest. */
+    var item = link.closest(".item");
+    [].slice.call(document.querySelectorAll(".sidebar .item.open"))
+      .forEach(function(i){ if (i !== item) i.classList.remove("open"); });
+    if (item) item.classList.add("open");
+
+    /* Keep the active link in view by scrolling the sidebar only. Calling
+       scrollIntoView here would be free to scroll the window and fight the
+       reader's own scrolling. */
+    var lr = link.getBoundingClientRect(), sr = side.getBoundingClientRect();
+    if (lr.top < sr.top + 8) side.scrollTop += lr.top - sr.top - 8;
+    else if (lr.bottom > sr.bottom - 8) side.scrollTop += lr.bottom - sr.bottom + 8;
+  }
+
+  var queued = false;
+  function onScroll(){
+    if (queued) return;
+    queued = true;
+    requestAnimationFrame(function(){ queued = false; sync(); });
+  }
+  window.addEventListener("scroll", onScroll, {passive:true});
+  window.addEventListener("resize", onScroll, {passive:true});
+  /* A shared deep link (#01-the-interview-the-worked-example) is scrolled by
+     the browser after this script runs, so sync once more on arrival. */
+  window.addEventListener("hashchange", onScroll);
+  window.addEventListener("load", onScroll);
+  sync();
 })();</script>
 </body>
 </html>
