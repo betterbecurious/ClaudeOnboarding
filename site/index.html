@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Claude, your new Employee</title>
+<meta name="description" content="A course in five stations, built along an employment relationship: the interview, the onboarding, the first real day, tools and access, promotion.">
+<meta name="author" content="Billie Jeurink">
+<meta property="og:title" content="Claude, your new Employee">
+<meta property="og:description" content="Most courses on this subject demonstrate features. This one is built along an employment relationship — from the interview to the promotion.">
+<meta property="og:type" content="website">
+<!--
+  GENERATED FILE - do not edit by hand.
+  Canonical source is README.md and docs/. Regenerate with:  python3 build-site.py
+-->
+<style>*,*::before,*::after{box-sizing:border-box}
+:root{
+  --paper:#fbfaf8; --paper-2:#f3f1ed; --ink:#1c1a17; --ink-2:#524d45;
+  --ink-3:#847d72; --rule:#e0dcd4; --accent:#3d4f63; --accent-soft:#eaeef3;
+  --code-bg:#f0eee9; --max:44rem;
+  --delegation:#8a6a2f; --delegation-bg:#f7f0e0;
+  --description:#2f5d8a; --description-bg:#e4eef7;
+  --discernment:#6a4a86; --discernment-bg:#efe8f6;
+  --diligence:#3d6b4a; --diligence-bg:#e5f0e8;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#16181a; --paper-2:#1e2124; --ink:#e8e6e3; --ink-2:#b0aca6;
+    --ink-3:#84807a; --rule:#2f3337; --accent:#9db6d0; --accent-soft:#23303d;
+    --code-bg:#22262a;
+    --delegation:#d4ac6a; --delegation-bg:#332a17;
+    --description:#8fb8dd; --description-bg:#1b2a38;
+    --discernment:#b79ad6; --discernment-bg:#2a2136;
+    --diligence:#8dc39d; --diligence-bg:#1c2f23;
+  }
+}
+html{scroll-behavior:smooth;scroll-padding-top:1.5rem;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font:16px/1.65 ui-serif,Charter,"Bitstream Charter","Iowan Old Style",Georgia,serif;
+  font-feature-settings:"kern","liga";
+}
+.layout{display:grid;grid-template-columns:16rem minmax(0,1fr);gap:3.5rem;
+  max-width:74rem;margin:0 auto;padding:0 1.5rem}
+
+/* Sidebar */
+.sidebar{position:sticky;top:0;align-self:start;height:100vh;overflow-y:auto;
+  padding:2.5rem 0 3rem;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+.sidebar .brand{font-weight:650;font-size:.9rem;letter-spacing:-.01em;
+  color:var(--ink);text-decoration:none;display:block;line-height:1.3}
+.sidebar .brand span{display:block;font-weight:400;font-size:.76rem;color:var(--ink-3);
+  margin-top:.2rem}
+.sidebar nav{margin-top:1.75rem}
+.sidebar .group{font-size:.68rem;text-transform:uppercase;letter-spacing:.09em;
+  color:var(--ink-3);margin:1.5rem 0 .5rem;font-weight:600}
+.sidebar a.nav{display:block;padding:.26rem 0 .26rem .7rem;font-size:.83rem;
+  color:var(--ink-2);text-decoration:none;border-left:2px solid var(--rule);
+  transition:color .12s,border-color .12s}
+.sidebar a.nav:hover{color:var(--ink)}
+.sidebar a.nav.active{color:var(--accent);border-left-color:var(--accent);font-weight:550}
+.sidebar a.nav.soon{color:var(--ink-3);font-style:italic}
+.sidebar a.nav.soon:hover{color:var(--ink-2)}
+.sidebar .foot{margin-top:2rem;padding-top:1rem;border-top:1px solid var(--rule);
+  font-size:.72rem;color:var(--ink-3);line-height:1.5}
+.sidebar .foot a{color:var(--ink-3)}
+
+/* Content */
+main{padding:2.5rem 0 6rem;min-width:0;max-width:var(--max)}
+h1,h2,h3,h4{font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  letter-spacing:-.021em;line-height:1.22;color:var(--ink)}
+h1{font-size:2.35rem;font-weight:680;margin:0 0 1rem}
+h2{font-size:1.42rem;font-weight:640;margin:0 0 .35rem}
+h3{font-size:1.12rem;font-weight:640;margin:2.35rem 0 .6rem}
+h4{font-size:.95rem;font-weight:640;margin:1.6rem 0 .4rem}
+h5{font-size:.86rem;font-weight:650;margin:1.35rem 0 .35rem;color:var(--ink-2);
+  text-transform:uppercase;letter-spacing:.05em;
+  font-family:ui-sans-serif,system-ui,-apple-system,sans-serif}
+h6{font-size:.85rem;font-weight:620;margin:1.2rem 0 .3rem;color:var(--ink-2)}
+p{margin:0 0 1rem}
+a{color:var(--accent);text-decoration:underline;text-decoration-thickness:1px;
+  text-underline-offset:2px}
+ul,ol{margin:0 0 1rem;padding-left:1.25rem}
+li{margin-bottom:.4rem}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.855em;
+  background:var(--code-bg);padding:.1em .35em;border-radius:3px}
+pre{background:var(--code-bg);padding:1rem 1.1rem;border-radius:6px;overflow-x:auto;
+  margin:0 0 1.25rem;border:1px solid var(--rule)}
+pre code{background:none;padding:0;font-size:.83rem;line-height:1.55}
+blockquote{margin:0 0 1.25rem;padding:.1rem 0 .1rem 1.1rem;
+  border-left:2px solid var(--rule);color:var(--ink-2)}
+blockquote p:last-child{margin-bottom:0}
+hr{border:0;border-top:1px solid var(--rule);margin:3rem 0}
+.table-wrap{overflow-x:auto;margin:0 0 1.35rem;
+  -webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:.87rem;
+  font-family:ui-sans-serif,system-ui,-apple-system,sans-serif}
+th,td{text-align:left;padding:.5rem .7rem;border-bottom:1px solid var(--rule);
+  vertical-align:top}
+th{font-weight:620;font-size:.76rem;text-transform:uppercase;letter-spacing:.05em;
+  color:var(--ink-3);border-bottom-width:1.5px}
+details.expand{margin:0 0 1.35rem;border:1px solid var(--rule);border-radius:6px;
+  background:var(--paper-2)}
+details.expand summary{cursor:pointer;padding:.6rem .9rem;font-size:.85rem;font-weight:600;
+  font-family:ui-sans-serif,system-ui,-apple-system,sans-serif;color:var(--ink-2);
+  list-style:none;user-select:none}
+details.expand summary::-webkit-details-marker{display:none}
+details.expand summary::before{content:"\203A";display:inline-block;margin-right:.5rem;
+  transition:transform .15s;color:var(--ink-3)}
+details.expand[open] summary::before{transform:rotate(90deg)}
+details.expand summary:hover{color:var(--ink)}
+details.expand > *:not(summary){padding-left:.9rem;padding-right:.9rem}
+details.expand > *:last-child{padding-bottom:.4rem}
+
+/* Section headers */
+section{scroll-margin-top:1.5rem}
+.section-head{margin:4.5rem 0 1.5rem;padding-top:1.5rem;border-top:1px solid var(--rule)}
+.section-head:first-child{border-top:0;padding-top:0}
+.comps{margin-top:.55rem;display:flex;flex-wrap:wrap;gap:.35rem}
+.comp{display:inline-block;font-family:ui-sans-serif,system-ui,-apple-system,sans-serif;
+  font-size:.66rem;font-weight:650;text-transform:uppercase;letter-spacing:.08em;
+  padding:.2rem .5rem;border-radius:3px}
+.comp-Delegation{color:var(--delegation);background:var(--delegation-bg)}
+.comp-Description{color:var(--description);background:var(--description-bg)}
+.comp-Discernment{color:var(--discernment);background:var(--discernment-bg)}
+.comp-Diligence{color:var(--diligence);background:var(--diligence-bg)}
+.comp-soon{color:var(--ink-3);background:var(--paper-2);border:1px solid var(--rule)}
+
+/* Not-yet-written stations */
+section.soon h2{color:var(--ink-2)}
+.soon-note{color:var(--ink-3);font-size:.95rem}
+
+/* Hero */
+.hero{padding:3.5rem 0 1rem}
+.thesis{font-size:1.16rem;line-height:1.55;color:var(--ink);margin:0 0 1.25rem}
+.spine{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92rem;
+  background:var(--paper-2);border:1px solid var(--rule);border-radius:6px;
+  padding:.9rem 1.1rem;margin:0 0 1.25rem;text-align:center;overflow-x:auto;
+  white-space:nowrap}
+.meta{font-family:ui-sans-serif,system-ui,-apple-system,sans-serif;font-size:.78rem;
+  color:var(--ink-3);margin:0}
+
+footer{border-top:1px solid var(--rule);margin-top:5rem;padding:2rem 0 4rem;
+  font-family:ui-sans-serif,system-ui,-apple-system,sans-serif;font-size:.82rem;
+  color:var(--ink-3)}
+footer .reviewed{font-weight:600;color:var(--ink-2)}
+
+@media (max-width:960px){
+  .layout{grid-template-columns:1fr;gap:0}
+  .sidebar{position:static;height:auto;padding:1.75rem 0 1.25rem;
+    border-bottom:1px solid var(--rule)}
+  .sidebar nav,.sidebar .foot{display:none}
+  main{padding-top:1.5rem}
+  .hero{padding-top:2rem}
+  h1{font-size:1.85rem}
+}</style>
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar"><a class="brand" href="#top">Claude, your new Employee<span>A course in five stations</span></a>
+<nav>
+<div class="group">The course</div>
+<a class="nav" href="#00-intro">Introduction</a>
+<a class="nav" href="#01-the-interview">Station 1 — The Interview</a>
+<a class="nav soon" href="#02-onboarding">Station 2 — The Onboarding</a>
+<a class="nav soon" href="#03-first-day">Station 3 — The First Real Day</a>
+<a class="nav soon" href="#04-tools-and-access">Station 4 — Tools and Access</a>
+<a class="nav soon" href="#05-promotion">Station 5 — Promotion to Team Lead</a>
+<div class="group">About the course</div>
+<a class="nav" href="#00-intro-what-this-course-is-not">What this course is not</a>
+<a class="nav" href="#freshness">Freshness</a>
+<a class="nav" href="#about">Author &amp; license</a>
+</nav>
+<div class="foot">Canonical source is <code>docs/</code>.<br>This page is generated from it.<br><br><a href="https://github.com/betterbecurious/ClaudeOnboarding">Repository</a></div></aside>
+<main>
+<div class="hero" id="top">
+<h1>Claude, your new Employee</h1>
+<p class="thesis">Most courses on this subject demonstrate features. This one is built along an employment relationship — from the interview to the promotion.</p>
+<div class="spine">Intro → Interview → Onboarding → First day → Tools → Promotion</div>
+<div class="table-wrap"><table><thead><tr><th>#</th><th>Station</th><th>What you can do afterwards</th></tr></thead><tbody><tr><td>1</td><td>The Interview</td><td>Hand over a task so that a usable result comes out — and recognise when it hasn't</td></tr><tr><td>2</td><td>The Onboarding</td><td>Set up a recurring task once, instead of explaining it again every time</td></tr><tr><td>3</td><td>The First Real Day</td><td>Turn unsorted material into finished work</td></tr><tr><td>4</td><td>Tools and Access</td><td>Give access to real systems — and build yourself a tool</td></tr><tr><td>5</td><td>Promotion to Team Lead</td><td>Write a standard that holds across several tasks</td></tr></tbody></table></div>
+<p>Unlike a reference, there is an order here, and it is not decorative. Station 3 assumes you have done Station 2.</p>
+<p class="meta">A course, not a reference. There is a reading order and it is not decorative.</p>
+</div>
+<section id="00-intro">
+<div class="section-head"><h2>Introduction</h2></div>
+<h3 id="00-intro-what-this-is-about">What this is about</h3>
+<p>Most courses on this subject demonstrate features. This one is built along the shape of an employment: the interview, the onboarding, the first real day of work, tools and access, promotion. Anyone who has ever hired someone and brought them up to speed knows that order — and therefore already knows why a new employee without context is useless, and why nobody gets all the keys on their first day.</p>
+<p>Anthropic itself describes working with Claude as briefing a brilliant new employee who has no context on your project. So the metaphor is not invented here. It is only followed through to the end.</p>
+<h3 id="00-intro-what-this-course-is-not">What this course is not</h3>
+<p><strong>Not product documentation.</strong> Anthropic's documentation is complete, free, and better maintained than this repo will ever be. Where features, plans, or current limits are concerned, this course links out instead of retelling.</p>
+<p><strong>Not a promise to replace jobs.</strong> Claude takes over tasks, not roles. Decisions stay with people. Anyone selling you something else is selling.</p>
+<p><strong>Not legal advice.</strong> Where law comes up — data protection, the AI Act, transparency obligations — this course says that there is a decision a company has to make deliberately and document. Not how it should come out.</p>
+<p><strong>Not a prompt collection.</strong> The idea that the one correct prompt is lying around somewhere is the most expensive mistake in this field.</p>
+<h3 id="00-intro-who-it-s-for">Who it's for</h3>
+<ul><li>People in small and mid-sized businesses who need work to get done</li><li>Managers who have to decide whether this is worth it</li><li>Anyone who has already tried it and came away disappointed</li></ul>
+<p>There are no technical prerequisites. There is one substantive prerequisite: you need a task of your own that you want to work on. Without it, everything here stays a demonstration.</p>
+<h3 id="00-intro-how-you-work-with-it">How you work with it</h3>
+<p>Every station follows the same loop:</p>
+<ol><li><strong>The brief</strong> — what you should be able to do at the end</li><li><strong>The worked example</strong> — one example carried all the way through, complete</li><li><strong>Try it yourself</strong> — on material that is given to you</li><li><strong>Check</strong> — how you can tell whether it was any good</li><li><strong>On your own material</strong> — the part that counts</li><li><strong>What you keep</strong> — something you hold on to and can show</li></ol>
+<p>Step 5 is not optional. Anyone who only clicks through the examples has watched.</p>
+<h4 id="00-intro-feedback-without-an-instructor">Feedback without an instructor</h4>
+<p>This course is about Claude, so Claude is also the marker. Every station comes with a review instruction that you copy and hand to Claude along with your result. It is written to <strong>criticise rather than solve</strong> — it tells you which part is thin and why, and does not rewrite it for you.</p>
+<h3 id="00-intro-what-you-need">What you need</h3>
+<p>A Claude account and a browser. This course deliberately does not say which plan unlocks which feature — that changes, and a page that pins it down is wrong within a quarter. Where the plan matters, you are pointed at <a href="https://docs.claude.com/" target="_blank" rel="noopener">Anthropic's documentation</a>.</p>
+<p>On top of that: one real, uncritical document from your everyday work. Not a customer contract containing personal data. When in doubt, anonymise it or use the example material.</p>
+<h3 id="00-intro-the-four-competencies">The four competencies</h3>
+<p>Running across all five stations are four abilities that Anthropic, together with two academics, describes as <em>AI Fluency</em>:</p>
+<ul><li><strong>Delegation</strong> — deciding what you hand over in the first place</li><li><strong>Description</strong> — describing it so that something usable comes back</li><li><strong>Discernment</strong> — judging whether the result is any good</li><li><strong>Diligence</strong> — taking responsibility for what happens with it</li></ul>
+<p>Every station states at the top which of them it trains. At the end there is a self-check. Anyone who skips Delegation sits in front of an empty field in Station 2 and doesn't know what it is for.</p>
+</section>
+<section id="01-the-interview">
+<div class="section-head"><h2>Station 1 — The Interview</h2><div class="comps"><span class="comp comp-Delegation">Delegation</span><span class="comp comp-Description">Description</span><span class="comp comp-Discernment">Discernment</span></div></div>
+<h3 id="01-the-interview-what-this-is-about">What this is about</h3>
+<p>Nobody runs an interview without knowing what they are hiring for. So this station is about your work first, and about Claude second.</p>
+<p>The sentence this station turns on:</p>
+<blockquote><p>Ask badly and you get bad answers — and then you mistake that for a verdict on the candidate.</p></blockquote>
+<p>That is the diagnosis for half the market. People type something arbitrary, get something arbitrary back, and conclude the whole thing is worthless. They simply interviewed badly.</p>
+<h3 id="01-the-interview-what-you-can-do-afterwards">What you can do afterwards</h3>
+<ul><li>Pull out of your own week the tasks that are candidates at all</li><li>Hand over a task in a way that produces a usable result</li><li>Check an answer instead of believing it</li></ul>
+<h3 id="01-the-interview-before-you-start">Before you start</h3>
+<p>Put paper in front of you and have one real, uncritical document from your everyday work ready — a quote, a report, an extract from a manual, a contract with no personal data in it.</p>
+<h3 id="01-the-interview-1-what-are-you-actually-handing-over">1. What are you actually handing over?</h3>
+<p>Write down what you did <strong>last week</strong>. And write it so that somebody could have watched you do it: verbs, not abstract nouns.</p>
+<ul><li>❌ "Progressed the company formation"</li><li>✅ "Read through the draft articles of association"</li></ul>
+<p>That precision is not pedantry. Intentions cannot be broken into parts; activities can. Anyone who writes down project names gets stuck at the sorting stage and wrongly takes that for a problem with their profession.</p>
+<p>Ten to twelve lines. Then sort them — into <strong>three</strong> columns, not two:</p>
+<div class="table-wrap"><table><thead><tr><th>What you did</th><th>Mechanical</th><th>Groundwork</th><th>Decision</th></tr></thead><tbody><tr><td>Wrote the quote for Meier</td><td>Copying prices out of the list, formatting</td><td>Digging out comparable quotes from past years</td><td>What discount you give</td></tr><tr><td>Answered a complaint</td><td>—</td><td>Pulling together the delivery history and earlier replies</td><td>How accommodating you are</td></tr><tr><td>Typed up the timesheets</td><td>The whole row</td><td>—</td><td>—</td></tr><tr><td>Checked six supplier quotes</td><td>—</td><td>Price, lead time, warranty into one comparison table</td><td>Who gets the order</td></tr><tr><td>Went through job applications</td><td>—</td><td>Matching CVs against the requirements</td><td>Who you invite</td></tr><tr><td>Produced the monthly report</td><td>Merging figures from three exports</td><td>Flagging what stands out against last month</td><td>What is worth reporting</td></tr><tr><td>Reviewed a framework agreement</td><td>—</td><td>Marking deviations from your standard terms</td><td>Sign or renegotiate</td></tr></tbody></table></div>
+<p><strong>Why three columns.</strong> With two — "I can hand this over" and "I can't hand this over" — you notice on almost every line that a judgement is buried in there somewhere, push everything to the right, and walk away with the feeling that this doesn't work for your kind of job.</p>
+<p>The middle column solves that, because it <strong>splits the line</strong> instead of assigning the whole of it.</p>
+<blockquote><p><strong>You are not handing over the decision. You are handing over the groundwork.</strong></p></blockquote>
+<p>If your left column is nearly empty and your middle one nearly full: normal. Among the self-employed and in management that is the rule. It does not mean there is nothing here for you.</p>
+<p><strong>Mark exactly three rows.</strong> No more. Without a limit you write down your entire profession and take away nothing concrete. Choosing is the exercise.</p>
+<h3 id="01-the-interview-2-the-interview-guide">2. The interview guide</h3>
+<h4 id="01-the-interview-the-named-knowledge">The named knowledge</h4>
+<p>Anthropic lists the components of a prompt individually, with a recommended order:</p>
+<p><em>Task context · Tone context · Background data · Detailed task description and rules · Examples · Conversation history · Immediate task · Think step by step · Output formatting · Prefilled response</em></p>
+<p>Ten components. The terms are kept in the original here so that you can look them up. For the current version, always go to <a href="https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview" target="_blank" rel="noopener">Anthropic</a>.</p>
+<h4 id="01-the-interview-the-four-that-carry-ordinary-office-work">The four that carry ordinary office work</h4>
+<div class="table-wrap"><table><thead><tr><th>Part</th><th>What belongs in it</th><th>In the interview</th></tr></thead><tbody><tr><td><strong>Task context</strong></td><td>Who you are, what kind of business, what role Claude is taking</td><td>Describing the situation</td></tr><tr><td><strong>Background data</strong></td><td>Documents and facts Claude could not possibly know</td><td>Putting the file on the table</td></tr><tr><td><strong>Detailed task description and rules</strong></td><td>The task plus the limits: length, tone, what must not appear</td><td>Saying what you'll be judging on</td></tr><tr><td><strong>Examples</strong></td><td>A real earlier solution from your own house</td><td>Showing how things are done here</td></tr></tbody></table></div>
+<p>The rest is for developers, or rarely needed.</p>
+<h4 id="01-the-interview-the-distinction-most-people-fail-on">The distinction most people fail on</h4>
+<blockquote><p><strong>Context is what Claude could not possibly know. Hand-holding is how it should think.</strong></p></blockquote>
+<p>"Reply professionally and empathetically in three paragraphs" is hand-holding — in an interview that is the equivalent of instructing someone to look friendly. It costs space and changes little.</p>
+<p>"The customer has been with us for six years, our goodwill limit is X, this is how we answered comparable cases" is context, and it changes everything.</p>
+<h3 id="01-the-interview-3-the-worked-example">3. The worked example</h3>
+<p>An invented company, a real procedure. <strong>Hartmann Verpackungstechnik GmbH</strong>, 40 employees, family-owned, makes folding cartons. Customer: <strong>Nordfrucht GmbH</strong>, six years. One delivery is unusable.</p>
+<p>The customer's email:</p>
+<blockquote><p>Dear Sir or Madam, the delivery that arrived today (order 24-1187) is unusable. The print register is visibly out of alignment and the cartons will not fold up cleanly on our line. We have had to stop packing. We expect a complete replacement and a statement on how you intend to settle the downtime. Our delivery date to the retail chain is Friday. Kind regards, M. Brandt, Nordfrucht GmbH</p></blockquote>
+<p>Four passes. Each one adds <strong>one</strong> part; nothing is taken away. Work through them yourself — reading is not enough.</p>
+<h4 id="01-the-interview-pass-1-the-task-only">Pass 1 — the task only</h4>
+<pre><code>Write a reply to this customer email:
+[customer email]</code></pre>
+<p>The result reads cleanly and would suit any business on earth. <strong>Here is the trap:</strong> it looks good enough that most people stop. You still couldn't send it.</p>
+<h4 id="01-the-interview-pass-2-plus-task-context-and-background-data">Pass 2 — plus Task context and Background data</h4>
+<pre><code>You are replying on behalf of Hartmann Verpackungstechnik GmbH: family-owned,
+40 employees, we make folding cartons for food producers. Nordfrucht has been a
+customer for six years and we have never had any serious problems.
+
+What happened internally: during a tooling change on 11 March, the print register
+was not re-measured. The fault is ours. A replacement run is under way, earliest
+delivery Thursday midday.
+
+Write a reply to this customer email:
+[customer email]</code></pre>
+<p>For the first time it is <em>your</em> company. The cause is in there because you supplied it — not because Claude guessed it.</p>
+<h4 id="01-the-interview-pass-3-plus-rules">Pass 3 — plus Rules</h4>
+<pre><code>[everything from pass 2]
+
+How I&#x27;ll know a good reply when I see it:
+- 150 words maximum
+- the fault is named clearly, without a legal admission of liability
+- a specific date, no vague assurances
+- I can commit to a credit note up to €2,000, not above
+- no subjunctive, no boilerplate
+- signed by the head of sales, not by &quot;your Hartmann team&quot;</code></pre>
+<p>Length, tone and limits are right. The €2,000 shows up because you named it.</p>
+<h4 id="01-the-interview-pass-4-plus-examples">Pass 4 — plus Examples</h4>
+<pre><code>[everything from pass 3]
+
+This is how we answered a comparable case last year:
+
+&quot;Dear Mr Weiss,
+the fault is ours. When we switched to the new crease, the groove was set too
+deep, and that should have been caught in the final check. The replacement run
+has started and you will have the goods on Wednesday before midday. We will
+collect the faulty batch on the same run.
+For the downtime we are crediting you €1,400.
+Call me if Wednesday is too late.
+Kind regards, Andrea Hartmann, Sales&quot;</code></pre>
+<p>Now it sounds like Andrea Hartmann. Short sentences, direct address, the phone-call line at the end.</p>
+<blockquote><p><strong>The candidate has not got better. The question has got better.</strong></p></blockquote>
+<h4 id="01-the-interview-two-moves-that-have-nothing-to-do-with-wording">Two moves that have nothing to do with wording</h4>
+<p><strong>Order.</strong> Long documents at the beginning, your question at the end. Anthropic reports up to 30 % better answer quality in tests for this, especially with several documents. Checkable, immediately applicable — and the opposite of prompt magic.</p>
+<p><strong>Brevity.</strong> The smallest prompt that works is the best one. Anthropic explicitly recommends against over-engineering.</p>
+<h3 id="01-the-interview-4-don-t-believe-it-check-it">4. Don't believe it — check it</h3>
+<p>Take your own document and actively try to get Claude to make a mistake. Five types:</p>
+<ol><li><strong>Ask for something that isn't in there.</strong> Does it say "that isn't in the document", or does it invent?</li><li><strong>Build in a false premise.</strong> "Why is the notice period in clause 7 six months?" — when the clause says something else.</li><li><strong>Ask where it says that</strong> — and then actually go and look.</li><li><strong>Ask the same question twice, worded differently.</strong> Do you get the same answer twice?</li><li><strong>Ask for something outside the material.</strong> A figure, a date, a person it cannot know.</li></ol>
+<p>Out of that come the three habits:</p>
+<div class="table-wrap"><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Cite it</strong></td><td>Where does it say that?</td></tr><tr><td><strong>Cross-check</strong></td><td>Again, asked differently</td></tr><tr><td><strong>Spot-check</strong></td><td>Actually verify one item, rather than trusting the whole</td></tr></tbody></table></div>
+<blockquote><p>A confidently worded error is more dangerous than an obvious one.</p></blockquote>
+<h3 id="01-the-interview-5-try-it-yourself">5. Try it yourself</h3>
+<p>Write an interview guide for <strong>one of your three marked rows</strong>. Four parts, on paper or in an editor.</p>
+<pre><code>Task context:
+Background data:
+Task and rules:
+Example:</code></pre>
+<h3 id="01-the-interview-how-you-ll-know-it-s-good">How you'll know it's good</h3>
+<p>Check it against these five points before you ask anyone:</p>
+<ol><li>Is there anything in the <strong>Background data</strong> that Claude could not possibly know? If not, you have not supplied context — you have restated the task.</li><li>Are the <strong>rules checkable</strong> — numbers, limits, formats — or are they adjectives?</li><li>Is the <strong>example real</strong>, from your own house? An invented example teaches the wrong tone.</li><li>Have you written anywhere <strong>how</strong> Claude should think? Cut it.</li><li>Is the <strong>long material at the top</strong> and your question at the bottom?</li></ol>
+<h4 id="01-the-interview-getting-feedback">Getting feedback</h4>
+<p>Copy your guide, together with this instruction, into a new chat:</p>
+<pre><code>You are the marker on a course. Below is a briefing written by a participant,
+in four parts: Task context, Background data, Task and rules, Example.
+
+Assess each part separately against these criteria:
+- Task context: does it say who the business is and what role you are taking?
+- Background data: is there anything in it that you could not possibly know?
+- Rules: are they checkable, or just adjectives?
+- Example: is it concrete enough to read a tone off it?
+
+For each part say: usable / thin / missing — and why, in one sentence.
+Name the weakest part first.
+
+IMPORTANT: Do NOT rewrite the briefing. Do not draft an improvement.
+Only describe what is missing. The participant is to repair it themselves.
+
+Here is the briefing:</code></pre>
+<h3 id="01-the-interview-on-your-own-material">On your own material</h3>
+<p>Apply the same guide three times to different material of your own, and note what differs. This is the part that turns watching into being able to do it.</p>
+<h3 id="01-the-interview-what-goes-wrong">What goes wrong</h3>
+<p><strong>Hand-holding instead of context.</strong> The most common mistake. People write down how Claude should think instead of what it cannot know — and then wonder why the result stays generic.</p>
+<p><strong>Stopping at pass 1.</strong> The first answer looks respectable. Respectable and sendable are two different things.</p>
+<p><strong>Adjectives as rules.</strong> "Professional", "customer-focused", "appropriate" are not checkable. "150 words maximum" is.</p>
+<p><strong>No example.</strong> The part almost everybody leaves out, and the one that changes the tone most.</p>
+<p><strong>The fluency error.</strong> A fluently written answer is taken for a correct one. That is exactly why section 4 is not at the end but part of the routine.</p>
+<h3 id="01-the-interview-what-you-keep">What you keep</h3>
+<ul><li>Your list: last week, sorted, three rows marked</li><li>One completed interview guide</li><li>The three checking habits</li></ul>
+<p>That is what you take into Station 2 — where the guide becomes something permanent.</p>
+</section>
+<section id="02-onboarding" class="soon">
+<div class="section-head"><h2>Station 2 — The Onboarding</h2><div class="comps"><span class="comp comp-soon">Not yet published</span></div></div>
+<p class="soon-note">Set up a recurring task once, instead of explaining it again every time.</p>
+</section>
+<section id="03-first-day" class="soon">
+<div class="section-head"><h2>Station 3 — The First Real Day</h2><div class="comps"><span class="comp comp-soon">Not yet published</span></div></div>
+<p class="soon-note">Turn unsorted material into finished work.</p>
+</section>
+<section id="04-tools-and-access" class="soon">
+<div class="section-head"><h2>Station 4 — Tools and Access</h2><div class="comps"><span class="comp comp-soon">Not yet published</span></div></div>
+<p class="soon-note">Give access to real systems — and build yourself a tool.</p>
+</section>
+<section id="05-promotion" class="soon">
+<div class="section-head"><h2>Station 5 — Promotion to Team Lead</h2><div class="comps"><span class="comp comp-soon">Not yet published</span></div></div>
+<p class="soon-note">Write a standard that holds across several tasks.</p>
+</section>
+<section id="freshness"><div class="section-head"><h2>Freshness</h2></div>
+<p>This course sits on a fast-moving product surface. A stale public course is worse than none, so this one carries a <strong>reviewed</strong> date rather than an updated one — the claim is that someone checked, not that someone edited.</p>
+<p><strong>Review cadence: monthly</strong>, and immediately after any significant Claude platform release.</p>
+<p>The review routine, in order:</p>
+<ol><li><strong>Check every outbound link resolves.</strong> Anthropic's docs reorganise. Dead links are the first visible sign of rot.</li><li><strong>Re-read every station against current product behaviour.</strong> The stations that name product surfaces go stale first.</li><li><strong>Check for hardcoded plan or capability claims</strong> that have crept in. Replace with a link.</li><li><strong>Re-read the worked examples.</strong> An example that no longer produces roughly the described result is worse than no example, because a participant will follow it and conclude they did it wrong.</li><li><strong>Update the <code>Last reviewed</code> date</strong> here, in each station page, and in <code>LAST_REVIEWED</code> in <code>build-site.py</code>, then run <code>python3 build-site.py</code> so the site footer matches.</li><li><strong>Add a <code>CHANGELOG.md</code> entry</strong> — even when nothing changed. "Reviewed, no changes" is information.</li></ol>
+</section>
+<section id="about"><div class="section-head"><h2>Contributing, license, author</h2></div>
+<p><strong>Issues, yes. Pull requests, no.</strong></p>
+<p>If something is out of date, a link is dead, or you think a position here is wrong — <a href="https://github.com/betterbecurious/ClaudeOnboarding/issues" target="_blank" rel="noopener">open an issue</a>. Disagreement gets read. The editing stays with one person.</p>
+<p>No confidential documents in issues.</p>
+<p><a href="https://github.com/betterbecurious/ClaudeOnboarding/blob/main/LICENSE" target="_blank" rel="noopener">CC BY 4.0</a>. Use it, teach from it, translate it — credit <strong>Billie Jeurink</strong> and link back.</p>
+<p>Written and maintained by <strong>Billie Jeurink</strong>. <strong>billie@bjeurink.com</strong>.</p>
+</section>
+<footer>
+<p><span class="reviewed">Last reviewed: 2026-08-10</span> &mdash; reviewed, not merely updated.
+Reviewed monthly and after any significant Claude platform release.</p>
+<p>Written and maintained by Billie Jeurink.
+<a href="mailto:billie@bjeurink.com">billie@bjeurink.com</a>.
+Licensed <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>.</p>
+<p>The canonical source for this content is <code>docs/</code> in the repository.
+This page is generated from it by <code>build-site.py</code>; where they disagree, the docs are right.</p>
+</footer>
+</main>
+</div>
+<script>/* Scroll-spy. Nav order and document order are not identical -- the
+   "What this course is not" link points into the intro page -- so targets are
+   sorted by document position before the first-visible scan. */
+(function(){
+  var links = [].slice.call(document.querySelectorAll(".sidebar a.nav"));
+  var map = {};
+  links.forEach(function(l){ map[l.getAttribute("href").slice(1)] = l; });
+  var targets = Object.keys(map)
+    .map(function(id){ return document.getElementById(id); })
+    .filter(Boolean)
+    .sort(function(a, b){
+      return (a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING) ? -1 : 1;
+    });
+  if (!targets.length) return;
+
+  var visible = {};
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ visible[e.target.id] = e.isIntersecting; });
+    var current = null;
+    for (var i = 0; i < targets.length; i++){
+      if (visible[targets[i].id]){ current = targets[i].id; break; }
+    }
+    if (!current) return;
+    links.forEach(function(l){ l.classList.remove("active"); });
+    if (map[current]){
+      map[current].classList.add("active");
+      map[current].scrollIntoView({block:"nearest"});
+    }
+  }, {rootMargin:"0px 0px -70% 0px", threshold:0});
+
+  targets.forEach(function(t){ obs.observe(t); });
+})();</script>
+</body>
+</html>

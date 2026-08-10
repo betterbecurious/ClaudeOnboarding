@@ -1,0 +1,12 @@
+.DS_Store
+*.swp
+.idea/
+.vscode/
+node_modules/
+.claude/settings.local.json
+
+# German source drafts. The repo is English; these are the working notes the
+# course pages were translated from and are deliberately not published.
+# Provenance is recorded in CHANGELOG.md instead.
+Intro.md
+Station1.md
