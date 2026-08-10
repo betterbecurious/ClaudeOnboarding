@@ -64,6 +64,12 @@ SPINE = "Intro → Interview → Onboarding → First day → Tools → Promotio
 # Inline markdown
 # --------------------------------------------------------------------------
 
+def slugify(text):
+    """The anchor for a heading. One definition -- render(), outline() and the
+    exercise marker scan all slug the same text and must agree exactly."""
+    return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
+
+
 def rewrite_href(href):
     """Turn a docs-relative link into a single-page anchor."""
     if href.startswith(("http://", "https://", "mailto:", "#")):
@@ -126,8 +132,16 @@ def inline(text):
 # Block markdown
 # --------------------------------------------------------------------------
 
-def render(lines, heading_offset=1, slug_prefix=""):
-    """Render a list of markdown lines to HTML."""
+def render(lines, heading_offset=1, slug_prefix="", numbers=None, exercises=None):
+    """Render a list of markdown lines to HTML.
+
+    numbers   {slug: "1.4"} for `##` headings, so section numbers are generated
+              rather than typed into the markdown -- inserting a section
+              renumbers the rest for free and can't go stale.
+    exercises {slug} for sections the reader actually does something in.
+    """
+    numbers = numbers or {}
+    exercises = exercises or set()
     out = []
     i = 0
     n = len(lines)
@@ -179,8 +193,13 @@ def render(lines, heading_offset=1, slug_prefix=""):
         if m:
             level = min(len(m.group(1)) + heading_offset, 6)
             text = m.group(2)
-            slug = slug_prefix + re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
-            out.append('<h%d id="%s">%s</h%d>' % (level, slug, inline(text), level))
+            slug = slug_prefix + slugify(text)
+            num = numbers.get(slug)
+            pre = '<span class="secno">%s</span> ' % num if num else ""
+            chip = ('<span class="comp comp-exercise">Exercise</span>'
+                    if slug in exercises else "")
+            out.append('<h%d id="%s">%s%s%s</h%d>'
+                       % (level, slug, pre, inline(text), chip, level))
             i += 1
             continue
 
@@ -211,7 +230,8 @@ def render(lines, heading_offset=1, slug_prefix=""):
             while i < n and lines[i].strip().startswith(">"):
                 body.append(re.sub(r"^>\s?", "", lines[i].strip()))
                 i += 1
-            out.append("<blockquote>%s</blockquote>" % render(body, heading_offset, slug_prefix))
+            out.append("<blockquote>%s</blockquote>"
+                       % render(body, heading_offset, slug_prefix, numbers, exercises))
             continue
 
         # Ordered list
@@ -254,9 +274,7 @@ def render(lines, heading_offset=1, slug_prefix=""):
 def outline(lines):
     """The page's `##` headings in order, as (slug_suffix, text) pairs.
 
-    Feeds the nested sidebar outline. A course page is long and there are no
-    section numbers to count, so the sidebar is how a reader sees where they
-    are. Slugging has to match render() exactly or the anchors miss.
+    Feeds the section numbering and the nested sidebar outline.
     """
     out, in_fence = [], False
     for line in lines:
@@ -268,9 +286,34 @@ def outline(lines):
             continue
         m = re.match(r"^##\s+([^#].*)$", s)
         if m:
-            text = m.group(1)
-            out.append((re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-"), text))
+            out.append((slugify(m.group(1)), m.group(1)))
     return out
+
+
+def take_exercise_markers(lines, path):
+    """Pull `Exercise` marker lines out of the body, return (body, {slug}).
+
+    Convention: a line holding nothing but `Exercise`, directly under a `##`
+    heading. Kept as its own line rather than baked into the heading text so the
+    markdown still reads correctly on GitHub, where it renders as a code span.
+    """
+    body, exercises, current, in_fence = [], set(), None, False
+    for line in lines:
+        s = line.strip()
+        if s.startswith("```"):
+            in_fence = not in_fence
+        if not in_fence:
+            m = re.match(r"^##\s+([^#].*)$", s)
+            if m:
+                current = slugify(m.group(1))
+            elif s == "`Exercise`":
+                if current is None:
+                    sys.exit("error: %s has an `Exercise` marker before any "
+                             "## heading" % path)
+                exercises.add(current)
+                continue
+        body.append(line)
+    return body, exercises
 
 
 def load_page(path, slug):
@@ -293,11 +336,34 @@ def load_page(path, slug):
     for c in comps:
         if c not in COMPETENCIES:
             sys.exit("error: %s names unknown competency %r" % (path, c))
+
+    body, exercise_suffixes = take_exercise_markers(body, path)
+    sections = outline(body)
+
+    # Sections are numbered <station>.<n>. The station number comes from the
+    # filename, so "01-the-interview" gives 1.1, 1.2, ... A two-part number is
+    # unambiguous in a way a bare "4" was not: it cannot be confused with a
+    # station number. The introduction is station 00 and stays unnumbered --
+    # it is not a station and has no exercises.
+    station = int(slug[:2])
+    numbers = {}
+    if station:
+        for n, (suffix, _) in enumerate(sections, start=1):
+            numbers[slug + "-" + suffix] = "%d.%d" % (station, n)
+    exercises = {slug + "-" + s for s in exercise_suffixes}
+
     # offset 1: the page's "## What this is about" becomes h3 under the
     # station's h2.
     return {"slug": slug, "title": title, "comps": comps, "pending": None,
-            "outline": outline(body),
-            "html": render(body, heading_offset=1, slug_prefix=slug + "-")}
+            "outline": [(suffix, text, numbers.get(slug + "-" + suffix),
+                         slug + "-" + suffix in exercises)
+                        for suffix, text in sections],
+            "exercises": [(slug + "-" + suffix, text,
+                           numbers.get(slug + "-" + suffix))
+                          for suffix, text in sections
+                          if slug + "-" + suffix in exercises],
+            "html": render(body, heading_offset=1, slug_prefix=slug + "-",
+                           numbers=numbers, exercises=exercises)}
 
 
 def load_course():
@@ -310,7 +376,8 @@ def load_course():
             pages.append(load_page(path, slug))
         elif "pending" in entry:
             pages.append({"slug": slug, "title": entry["nav"], "comps": [],
-                          "pending": entry["pending"], "outline": [], "html": ""})
+                          "pending": entry["pending"], "outline": [],
+                          "exercises": [], "html": ""})
         else:
             sys.exit("error: docs/%s.md is missing and has no `pending` line "
                      "in COURSE" % slug)
@@ -393,6 +460,11 @@ body{
   border-left-color:transparent}
 .sidebar a.nav.sub-link:hover{color:var(--ink-2)}
 .sidebar a.nav.sub-link.active{color:var(--accent);border-left-color:var(--accent)}
+/* The sections you do something in, rather than read. */
+.sidebar a.nav.sub-link.ex{color:var(--ink-2);font-weight:550}
+.sidebar a.nav.sub-link.ex:hover{color:var(--ink)}
+.sidebar .subno{font-variant-numeric:tabular-nums;color:var(--ink-3);
+  font-size:.72rem}
 .sidebar .foot{margin-top:2rem;padding-top:1rem;border-top:1px solid var(--rule);
   font-size:.72rem;color:var(--ink-3);line-height:1.5}
 .sidebar .foot a{color:var(--ink-3)}
@@ -457,6 +529,26 @@ section{scroll-margin-top:1.5rem}
 .comp-Discernment{color:var(--discernment);background:var(--discernment-bg)}
 .comp-Diligence{color:var(--diligence);background:var(--diligence-bg)}
 .comp-soon{color:var(--ink-3);background:var(--paper-2);border:1px solid var(--rule)}
+.comp-exercise{color:var(--accent);background:var(--accent-soft);margin-left:.55rem;
+  vertical-align:.12em}
+
+/* Section numbers. Generated, two-part (station.section) so a number can never
+   be confused with a station number. */
+.secno{font-variant-numeric:tabular-nums;color:var(--ink-3);font-weight:600}
+h3 .secno{margin-right:.1em}
+
+/* The generated exercise index at the top of a station. */
+.exlist{border:1px solid var(--rule);border-left:3px solid var(--accent);
+  border-radius:6px;background:var(--paper-2);padding:.9rem 1.1rem;margin:0 0 1.75rem}
+.exlist-k{font-family:ui-sans-serif,system-ui,-apple-system,sans-serif;
+  font-size:.7rem;font-weight:650;text-transform:uppercase;letter-spacing:.07em;
+  color:var(--ink-3);margin-bottom:.5rem}
+.exlist ul{list-style:none;margin:0;padding:0;
+  font-family:ui-sans-serif,system-ui,-apple-system,sans-serif;font-size:.87rem}
+.exlist li{margin:0 0 .3rem}
+.exlist li:last-child{margin-bottom:0}
+.exlist a{color:var(--ink-2);text-decoration:none}
+.exlist a:hover{color:var(--accent);text-decoration:underline}
 
 /* Not-yet-written stations */
 section.soon h2{color:var(--ink-2)}
@@ -579,9 +671,11 @@ def build():
             " soon" if p["pending"] else "", p["slug"], html.escape(p["title"])))
         if p["outline"]:
             nav.append('<div class="sub">')
-            for suffix, text in p["outline"]:
-                nav.append('<a class="nav sub-link" href="#%s-%s">%s</a>'
-                           % (p["slug"], suffix, html.escape(text)))
+            for suffix, text, num, is_ex in p["outline"]:
+                nav.append('<a class="nav sub-link%s" href="#%s-%s">%s%s</a>'
+                           % (" ex" if is_ex else "", p["slug"], suffix,
+                              '<span class="subno">%s</span> ' % num if num else "",
+                              html.escape(text)))
             nav.append("</div>")
         nav.append("</div>")
     nav.append('<div class="group">About the course</div>')
@@ -603,7 +697,18 @@ def build():
             if p["comps"]:
                 chips = '<div class="comps">%s</div>' % "".join(
                     '<span class="comp comp-%s">%s</span>' % (c, c) for c in p["comps"])
-            body = p["html"]
+            # Generated from the `Exercise` markers, so it cannot drift out of
+            # step with the sections themselves. The sidebar is hidden below
+            # 960px, so on a phone this box is the only overview there is.
+            lead = ""
+            if p["exercises"]:
+                lead = ('<div class="exlist"><div class="exlist-k">'
+                        "What you actually do in this station</div><ul>%s</ul></div>"
+                        % "".join(
+                            '<li><a href="#%s"><span class="secno">%s</span> %s</a></li>'
+                            % (anchor, num, html.escape(text))
+                            for anchor, text, num in p["exercises"]))
+            body = lead + p["html"]
             cls = ""
         return (
             '<section id="%s"%s>\n'

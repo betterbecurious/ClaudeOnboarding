@@ -28,6 +28,8 @@ Put paper in front of you and have one real, uncritical document from your every
 
 ## What are you actually handing over?
 
+`Exercise`
+
 Write down what you did **last week**. And write it so that somebody could have watched you do it: verbs, not abstract nouns.
 
 - ❌ "Progressed the company formation"
@@ -92,6 +94,8 @@ The rest is for developers, or rarely needed.
 ---
 
 ## The worked example
+
+`Exercise`
 
 An invented company, a real procedure. **Hartmann Verpackungstechnik GmbH**, 40 employees, family-owned, makes folding cartons. Customer: **Nordfrucht GmbH**, six years. One delivery is unusable.
 
@@ -179,6 +183,8 @@ Now it sounds like Andrea Hartmann. Short sentences, direct address, the phone-c
 
 ## Don't believe it — interrogate it
 
+`Exercise`
+
 Take your own document and actively try to get Claude to make a mistake. Five types:
 
 - **Ask for something that isn't in there.** Does it say "that isn't in the document", or does it invent?
@@ -200,6 +206,8 @@ Out of that come the three habits:
 ---
 
 ## Try it yourself
+
+`Exercise`
 
 Write an interview guide for **one of your three marked rows**. Four parts, on paper or in an editor.
 
@@ -246,6 +254,8 @@ Here is the briefing:
 ---
 
 ## On your own material
+
+`Exercise`
 
 Apply the same guide three times to different material of your own, and note what differs. This is the part that turns watching into being able to do it.
 

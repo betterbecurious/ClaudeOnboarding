@@ -2,6 +2,17 @@
 
 What changed, when, and why. Review entries are logged even when nothing changed — "reviewed, no changes" is information.
 
+## 2026-08-10 — Two-part section numbers, and exercises marked
+
+Sections are numbered again, but hierarchically: **`<station>.<section>`**. `1.4` is the fourth section of Station 1. This composes instead of colliding — the earlier bare `4.` could be read as Station 4 or as loop step 4, whereas a two-part number cannot be mistaken for a station number. The wall of unnumbered headings was also simply hard to scan.
+
+- `build-site.py` — section numbers are **generated**, not typed into the markdown. The station number is parsed from the filename (`01-the-interview` → `1`), so inserting or moving a section renumbers the rest for free and no cross-reference can go stale. The introduction is station `00` and stays unnumbered; it is not a station.
+- `build-site.py` — new `Exercise` marker convention: a line holding nothing but `` `Exercise` ``, directly under a `##` heading. It renders as a chip on the heading, emphasises the entry in the sidebar outline, and feeds a generated *"What you actually do in this station"* index at the top of the station. Kept as its own line rather than baked into the heading text so the markdown still reads correctly on GitHub.
+- `build-site.py` — the exercise index matters most on a phone: the sidebar is hidden below 960px, so it is the only overview a mobile reader gets.
+- `build-site.py` — added a single `slugify()`; `render()`, `outline()` and the marker scan had three copies of the same regex and had to agree exactly or anchors would silently miss.
+- `docs/01-the-interview.md` — five sections marked as exercises: the sections where you work on your own material or produce something. `1.9 How you'll know it's good` is deliberately not one; it is the check on an exercise, not an exercise.
+- `docs/00-intro.md` — the skeleton section now explains the two-part numbering and the `Exercise` marker. It previously claimed the station was the only number in the course, which this change made untrue.
+
 ## 2026-08-10 — One numbered spine
 
 **Fixed** — three independent numbering schemes were running at once and two of them collided. Stations counted 1–5, the loop in `docs/00-intro.md` counted 1–6, and Station 1's own sections counted 1–5. The two 1–5 sequences meant different things and did not correspond: Station 1's "3. The worked example" was loop step 2, its "5. Try it yourself" was loop step 3, and its "4. Don't believe it — check it" was not a loop step at all, while loop step 4 ("Check") was the unnumbered "How you'll know it's good" further down. A reader using the numbers to locate themselves was actively misled.
