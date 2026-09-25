@@ -18,9 +18,9 @@ The whole course on one page, in order.
 | --- | --- | --- |
 | 1 | The Interview | Hand over a task so that a usable result comes out — and recognise when it hasn't |
 | 2 | The Onboarding | Set up a recurring task once, instead of explaining it again every time |
-| 3 | The First Real Day | Turn unsorted material into finished work |
+| 3 | The First Real Workday | Turn unsorted material into finished work |
 | 4 | Tools and Access | Give access to real systems — and build yourself a tool |
-| 5 | Promotion to Team Lead | Write a standard that holds across several tasks |
+| 5 | The Promotion | Write a standard that holds across several tasks |
 
 Unlike a reference, there is an order here, and it is not decorative. Station 3 assumes you have done Station 2.
 
@@ -31,9 +31,9 @@ Unlike a reference, there is an order here, and it is not decorative. Station 3 
 | [Introduction](docs/00-intro.md) | — | Published |
 | [Station 1 — The Interview](docs/01-the-interview.md) | Delegation · Description · Discernment | Published |
 | Station 2 — The Onboarding | | Not yet published |
-| Station 3 — The First Real Day | | Not yet published |
+| Station 3 — The First Real Workday | | Not yet published |
 | Station 4 — Tools and Access | | Not yet published |
-| Station 5 — Promotion to Team Lead | | Not yet published |
+| Station 5 — The Promotion | | Not yet published |
 
 Start with the [introduction](docs/00-intro.md). It states who the course is for, what it deliberately is not, how each station is built, and what you need in front of you before you begin.
 

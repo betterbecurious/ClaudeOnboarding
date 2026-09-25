@@ -44,20 +44,20 @@ COURSE = [
      "nav": "Station 2 — The Onboarding",
      "pending": "Set up a recurring task once, instead of explaining it "
                 "again every time."},
-    {"slug": "03-first-day",
-     "nav": "Station 3 — The First Real Day",
+    {"slug": "03-first-workday",
+     "nav": "Station 3 — The First Real Workday",
      "pending": "Turn unsorted material into finished work."},
     {"slug": "04-tools-and-access",
      "nav": "Station 4 — Tools and Access",
      "pending": "Give access to real systems — and build yourself a tool."},
     {"slug": "05-promotion",
-     "nav": "Station 5 — Promotion to Team Lead",
+     "nav": "Station 5 — The Promotion",
      "pending": "Write a standard that holds across several tasks."},
 ]
 
 COMPETENCIES = ["Delegation", "Description", "Discernment", "Diligence"]
 
-SPINE = "Intro → Interview → Onboarding → First day → Tools → Promotion"
+SPINE = "Intro → Interview → Onboarding → First workday → Tools → Promotion"
 
 
 # --------------------------------------------------------------------------

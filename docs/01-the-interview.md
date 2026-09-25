@@ -105,7 +105,7 @@ The rest is for developers, or rarely needed.
 
 `Exercise`
 
-An invented company, a real procedure. **Hartmann Verpackungstechnik GmbH**, 80 employees, family-owned, makes folding cartons. Customer: **Nordfrucht GmbH**, six years. One delivery is unusable.
+An invented company, a real procedure. **Hartmann Packaging GmbH**, 80 employees, family-owned, makes folding cartons. Customer: **Nordfrucht GmbH**, six years. One delivery is unusable.
 
 The customer's email:
 
@@ -130,7 +130,7 @@ The result reads cleanly and would suit any business on earth. **Here is the tra
 ### Pass 2 — plus Task context and Background data
 
 ```
-You are replying on behalf of Hartmann Verpackungstechnik GmbH: family-owned,
+You are replying on behalf of Hartmann Packaging GmbH: family-owned,
 80 employees, we make folding cartons for food producers. Nordfrucht has been a
 customer for six years and we have never had any serious problems.
 
@@ -183,7 +183,7 @@ Now it sounds like Andrea Hartmann. Short sentences, direct address, the phone-c
 
 ### Two moves that have nothing to do with wording
 
-**Order.** Long documents at the beginning, your question at the end. Anthropic reports up to 30 % better answer quality in tests for this, especially with several documents. Checkable, immediately applicable — and the opposite of prompt magic.
+**Order.** Long documents at the beginning, your question at the end. Anthropic recommends this, especially when there are several documents. Checkable, immediately applicable — and the opposite of prompt magic.
 
 **Brevity.** The smallest prompt that works is the best one. Anthropic explicitly recommends against over-engineering.
 

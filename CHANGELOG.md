@@ -13,6 +13,9 @@ The employment analogy helps a reader keep their place in the course, but it was
 - **"Interview guide" is now "briefing"** everywhere (heading 1.5, *Try it yourself*, *Getting feedback*, *On your own material*, *What you keep*, the Station 2 hand-over, the introduction). The thing a participant writes is a prompt, and naming it after an interview invited exactly the confusion this change removes. The review instruction already called it a briefing. Section anchor `#…the-interview-guide` changes accordingly.
 - `docs/01-the-interview.md` — the sentence the station turns on now ends "…a verdict on the **tool**", not "on the candidate".
 - `build-site.py` — the Diligence badge is a muted red instead of green; green was too close to the New hire box.
+- **Hartmann Packaging GmbH** instead of Hartmann Verpackungstechnik GmbH, in the example description and the pass 2 prompt. English course, English company name; matches the workshop.
+- Station names now match the workshop: **Station 3 — The First Real Workday**, **Station 5 — The Promotion** (`README.md`, `COURSE` in `build-site.py`; pending slug `03-first-day` → `03-first-workday`).
+- Removed "Anthropic reports up to 30 % better answer quality" from *Two moves that have nothing to do with wording*. The recommendation stays; the figure goes, because unverifiable quality percentages undercut the rest of the course in a sceptical room.
 - `Last reviewed` unchanged: this is an edit, not a full review.
 
 ## 2026-08-10 — Two-part section numbers, and exercises marked
