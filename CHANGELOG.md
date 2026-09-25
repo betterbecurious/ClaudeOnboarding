@@ -2,7 +2,7 @@
 
 What changed, when, and why. Review entries are logged even when nothing changed — "reviewed, no changes" is information.
 
-## 2026-09-25 — The analogy gets its own box; Hartmann has 80 employees
+## 2026-09-25 — The analogy gets its own box; "briefing" instead of "interview guide"; Hartmann has 80 employees
 
 The employment analogy helps a reader keep their place in the course, but it was mixed into the method: the table of prompt parts had a column "In the interview", and several sentences only made sense through the hiring picture. A reader learning what goes into a prompt should not be thinking about job-interview questions. Same change as in the Tbilisi workshop pages, so both use one convention.
 
@@ -10,6 +10,9 @@ The employment analogy helps a reader keep their place in the course, but it was
 - `docs/01-the-interview.md` — analogy sentences moved into New hire boxes, wording unchanged: "Nobody runs an interview…", "They simply interviewed badly.", the "look friendly" comparison, and "The candidate has not got better. The question has got better." The table of the four prompt parts lost its "In the interview" column; the column's content is now one New hire box under the table.
 - `docs/01-the-interview.md` — Hartmann Verpackungstechnik GmbH now has **80** employees instead of 40, in the example description and in the pass 2 prompt. Matches the workshop material.
 - `docs/00-intro.md` — *How you work with it* explains the New hire box.
+- **"Interview guide" is now "briefing"** everywhere (heading 1.5, *Try it yourself*, *Getting feedback*, *On your own material*, *What you keep*, the Station 2 hand-over, the introduction). The thing a participant writes is a prompt, and naming it after an interview invited exactly the confusion this change removes. The review instruction already called it a briefing. Section anchor `#…the-interview-guide` changes accordingly.
+- `docs/01-the-interview.md` — the sentence the station turns on now ends "…a verdict on the **tool**", not "on the candidate".
+- `build-site.py` — the Diligence badge is a muted red instead of green; green was too close to the New hire box.
 - `Last reviewed` unchanged: this is an edit, not a full review.
 
 ## 2026-08-10 — Two-part section numbers, and exercises marked

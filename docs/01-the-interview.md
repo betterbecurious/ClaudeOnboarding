@@ -12,7 +12,7 @@ This station is about your work first, and about Claude second.
 
 The sentence this station turns on:
 
-> Ask badly and you get bad answers — and then you mistake that for a verdict on the candidate.
+> Ask badly and you get bad answers — and then you mistake that for a verdict on the tool.
 
 That is the diagnosis for half the market. People type something arbitrary, get something arbitrary back, and conclude the whole thing is worthless.
 
@@ -65,7 +65,7 @@ If your left column is nearly empty and your middle one nearly full: normal. Amo
 
 ---
 
-## The interview guide
+## The briefing
 
 ### The named knowledge
 
@@ -217,7 +217,7 @@ Out of that come the three habits:
 
 `Exercise`
 
-Write an interview guide for **one of your three marked rows**. Four parts, on paper or in an editor.
+Write a briefing for **one of your three marked rows**. Four parts, on paper or in an editor.
 
 ```
 Task context:
@@ -238,7 +238,7 @@ Check it against these five points before you ask anyone:
 
 ### Getting feedback
 
-Copy your guide, together with this instruction, into a new chat:
+Copy your briefing, together with this instruction, into a new chat:
 
 ```
 You are the marker on a course. Below is a briefing written by a participant,
@@ -265,7 +265,7 @@ Here is the briefing:
 
 `Exercise`
 
-Apply the same guide three times to different material of your own, and note what differs. This is the part that turns watching into being able to do it.
+Apply the same briefing three times to different material of your own, and note what differs. This is the part that turns watching into being able to do it.
 
 ## What goes wrong
 
@@ -282,10 +282,10 @@ Apply the same guide three times to different material of your own, and note wha
 ## What you keep
 
 - Your list: last week, sorted, three rows marked
-- One completed interview guide
+- One completed briefing
 - The three checking habits
 
-That is what you take into Station 2 — where the guide becomes something permanent.
+That is what you take into Station 2 — where the briefing becomes something permanent.
 
 ---
 

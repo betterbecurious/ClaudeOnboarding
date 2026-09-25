@@ -418,7 +418,7 @@ CSS = """
   --delegation:#8a6a2f; --delegation-bg:#f7f0e0;
   --description:#2f5d8a; --description-bg:#e4eef7;
   --discernment:#6a4a86; --discernment-bg:#efe8f6;
-  --diligence:#3d6b4a; --diligence-bg:#e5f0e8;
+  --diligence:#9a3f4a; --diligence-bg:#f6e5e8;
   --newhire:#3d5440; --newhire-bg:#e7ece2; --newhire-rule:#cfd9c8;
 }
 @media (prefers-color-scheme:dark){
@@ -429,7 +429,7 @@ CSS = """
     --delegation:#d4ac6a; --delegation-bg:#332a17;
     --description:#8fb8dd; --description-bg:#1b2a38;
     --discernment:#b79ad6; --discernment-bg:#2a2136;
-    --diligence:#8dc39d; --diligence-bg:#1c2f23;
+    --diligence:#e0939c; --diligence-bg:#3a1f24;
     --newhire:#b9ccb3; --newhire-bg:#1f2820; --newhire-rule:#34432f;
   }
 }

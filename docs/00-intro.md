@@ -46,7 +46,7 @@ These headings appear in every station, in this order:
 - **What goes wrong** — the mistakes to expect, so you recognise them in your own work
 - **What you keep** — something you hold on to and can show
 
-Between them sit the sections belonging to that station alone — in Station 1, working out what you actually hand over, and how to write an interview guide.
+Between them sit the sections belonging to that station alone — in Station 1, working out what you actually hand over, and how to write a briefing.
 
 **On your own material** is not optional. Anyone who only clicks through the examples has watched.
 
