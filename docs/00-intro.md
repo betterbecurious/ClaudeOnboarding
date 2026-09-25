@@ -32,6 +32,8 @@ There are no technical prerequisites. There is one substantive prerequisite: you
 
 Every station has the same skeleton. Sections are numbered by station — **1.4** is the fourth section of Station 1 — so a number always tells you both where you are and which station you are in.
 
+The employment analogy is there to help you find your way, not to teach the method. Wherever it appears, it sits in its own box marked **New hire**, apart from the text around it. Read the box for orientation; read everything else for what to do.
+
 The sections where you put the work in, rather than read it, are marked **Exercise**. Each station lists them at the top, so you can see what is being asked of you before you start.
 
 These headings appear in every station, in this order:

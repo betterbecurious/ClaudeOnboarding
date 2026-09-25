@@ -22,6 +22,7 @@
   --description:#2f5d8a; --description-bg:#e4eef7;
   --discernment:#6a4a86; --discernment-bg:#efe8f6;
   --diligence:#3d6b4a; --diligence-bg:#e5f0e8;
+  --newhire:#3d5440; --newhire-bg:#e7ece2; --newhire-rule:#cfd9c8;
 }
 @media (prefers-color-scheme:dark){
   :root{
@@ -32,6 +33,7 @@
     --description:#8fb8dd; --description-bg:#1b2a38;
     --discernment:#b79ad6; --discernment-bg:#2a2136;
     --diligence:#8dc39d; --diligence-bg:#1c2f23;
+    --newhire:#b9ccb3; --newhire-bg:#1f2820; --newhire-rule:#34432f;
   }
 }
 html{scroll-behavior:smooth;scroll-padding-top:1.5rem;-webkit-text-size-adjust:100%}
@@ -103,6 +105,13 @@ pre code{background:none;padding:0;font-size:.83rem;line-height:1.55}
 blockquote{margin:0 0 1.25rem;padding:.1rem 0 .1rem 1.1rem;
   border-left:2px solid var(--rule);color:var(--ink-2)}
 blockquote p:last-child{margin-bottom:0}
+/* the employment analogy, always in the same box and colour, never mixed into the method */
+.newhire{margin:0 0 1.35rem;padding:.8rem 1.05rem .85rem;border-radius:8px;
+  background:var(--newhire-bg);border:1px solid var(--newhire-rule);color:var(--newhire);
+  font-style:italic}
+.newhire p{margin:0 0 .5rem}.newhire p:last-child{margin-bottom:0}
+.newhire-tag{display:block;margin-bottom:.35rem;font-style:normal;font-size:.7rem;font-weight:650;
+  letter-spacing:.09em;text-transform:uppercase}
 hr{border:0;border-top:1px solid var(--rule);margin:3rem 0}
 .table-wrap{overflow-x:auto;margin:0 0 1.35rem;
   -webkit-overflow-scrolling:touch}
@@ -262,6 +271,7 @@ footer .reviewed{font-weight:600;color:var(--ink-2)}
 <p>There are no technical prerequisites. There is one substantive prerequisite: you need a task of your own that you want to work on. Without it, everything here stays a demonstration.</p>
 <h3 id="00-intro-how-you-work-with-it">How you work with it</h3>
 <p>Every station has the same skeleton. Sections are numbered by station — <strong>1.4</strong> is the fourth section of Station 1 — so a number always tells you both where you are and which station you are in.</p>
+<p>The employment analogy is there to help you find your way, not to teach the method. Wherever it appears, it sits in its own box marked <strong>New hire</strong>, apart from the text around it. Read the box for orientation; read everything else for what to do.</p>
 <p>The sections where you put the work in, rather than read it, are marked <strong>Exercise</strong>. Each station lists them at the top, so you can see what is being asked of you before you start.</p>
 <p>These headings appear in every station, in this order:</p>
 <ul><li><strong>What you can do afterwards</strong> — the brief, at the top</li><li><strong>The worked example</strong> — one case carried all the way through, complete</li><li><strong>Try it yourself</strong> — on material that is given to you</li><li><strong>How you'll know it's good</strong> — the check, with a review instruction you hand to Claude</li><li><strong>On your own material</strong> — the part that counts</li><li><strong>What goes wrong</strong> — the mistakes to expect, so you recognise them in your own work</li><li><strong>What you keep</strong> — something you hold on to and can show</li></ul>
@@ -280,10 +290,12 @@ footer .reviewed{font-weight:600;color:var(--ink-2)}
 <section id="01-the-interview">
 <div class="section-head"><h2>Station 1 — The Interview</h2><div class="comps"><span class="comp comp-Delegation">Delegation</span><span class="comp comp-Description">Description</span><span class="comp comp-Discernment">Discernment</span></div></div>
 <div class="exlist"><div class="exlist-k">What you actually do in this station</div><ul><li><a href="#01-the-interview-what-are-you-actually-handing-over"><span class="secno">1.4</span> What are you actually handing over?</a></li><li><a href="#01-the-interview-the-worked-example"><span class="secno">1.6</span> The worked example</a></li><li><a href="#01-the-interview-don-t-believe-it-interrogate-it"><span class="secno">1.7</span> Don&#x27;t believe it — interrogate it</a></li><li><a href="#01-the-interview-try-it-yourself"><span class="secno">1.8</span> Try it yourself</a></li><li><a href="#01-the-interview-on-your-own-material"><span class="secno">1.10</span> On your own material</a></li></ul></div><h3 id="01-the-interview-what-this-is-about"><span class="secno">1.1</span> What this is about</h3>
-<p>Nobody runs an interview without knowing what they are hiring for. So this station is about your work first, and about Claude second.</p>
+<p>This station is about your work first, and about Claude second.</p>
+<aside class="newhire"><span class="newhire-tag">New hire</span><p>Nobody runs an interview without knowing what they are hiring for.</p></aside>
 <p>The sentence this station turns on:</p>
 <blockquote><p>Ask badly and you get bad answers — and then you mistake that for a verdict on the candidate.</p></blockquote>
-<p>That is the diagnosis for half the market. People type something arbitrary, get something arbitrary back, and conclude the whole thing is worthless. They simply interviewed badly.</p>
+<p>That is the diagnosis for half the market. People type something arbitrary, get something arbitrary back, and conclude the whole thing is worthless.</p>
+<aside class="newhire"><span class="newhire-tag">New hire</span><p>They simply interviewed badly.</p></aside>
 <h3 id="01-the-interview-what-you-can-do-afterwards"><span class="secno">1.2</span> What you can do afterwards</h3>
 <ul><li>Pull out of your own week the tasks that are candidates at all</li><li>Hand over a task in a way that produces a usable result</li><li>Check an answer instead of believing it</li></ul>
 <h3 id="01-the-interview-before-you-start"><span class="secno">1.3</span> Before you start</h3>
@@ -305,14 +317,16 @@ footer .reviewed{font-weight:600;color:var(--ink-2)}
 <p><em>Task context · Tone context · Background data · Detailed task description and rules · Examples · Conversation history · Immediate task · Think step by step · Output formatting · Prefilled response</em></p>
 <p>Ten components. The terms are kept in the original here so that you can look them up. For the current version, always go to <a href="https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview" target="_blank" rel="noopener">Anthropic</a>.</p>
 <h4 id="01-the-interview-the-four-that-carry-ordinary-office-work">The four that carry ordinary office work</h4>
-<div class="table-wrap"><table><thead><tr><th>Part</th><th>What belongs in it</th><th>In the interview</th></tr></thead><tbody><tr><td><strong>Task context</strong></td><td>Who you are, what kind of business, what role Claude is taking</td><td>Describing the situation</td></tr><tr><td><strong>Background data</strong></td><td>Documents and facts Claude could not possibly know</td><td>Putting the file on the table</td></tr><tr><td><strong>Detailed task description and rules</strong></td><td>The task plus the limits: length, tone, what must not appear</td><td>Saying what you'll be judging on</td></tr><tr><td><strong>Examples</strong></td><td>A real earlier solution from your own house</td><td>Showing how things are done here</td></tr></tbody></table></div>
+<div class="table-wrap"><table><thead><tr><th>Part</th><th>What belongs in it</th></tr></thead><tbody><tr><td><strong>Task context</strong></td><td>Who you are, what kind of business, what role Claude is taking</td></tr><tr><td><strong>Background data</strong></td><td>Documents and facts Claude could not possibly know</td></tr><tr><td><strong>Detailed task description and rules</strong></td><td>The task plus the limits: length, tone, what must not appear</td></tr><tr><td><strong>Examples</strong></td><td>A real earlier solution from your own house</td></tr></tbody></table></div>
+<aside class="newhire"><span class="newhire-tag">New hire</span><p>In the interview, the same four parts are describing the situation, putting the file on the table, saying what you'll be judging on, and showing how things are done here.</p></aside>
 <p>The rest is for developers, or rarely needed.</p>
 <h4 id="01-the-interview-the-distinction-most-people-fail-on">The distinction most people fail on</h4>
 <blockquote><p><strong>Context is what Claude could not possibly know. Hand-holding is how it should think.</strong></p></blockquote>
-<p>"Reply professionally and empathetically in three paragraphs" is hand-holding — in an interview that is the equivalent of instructing someone to look friendly. It costs space and changes little.</p>
+<p>"Reply professionally and empathetically in three paragraphs" is hand-holding. It costs space and changes little.</p>
+<aside class="newhire"><span class="newhire-tag">New hire</span><p>In an interview, that is the equivalent of instructing someone to look friendly.</p></aside>
 <p>"The customer has been with us for six years, our goodwill limit is X, this is how we answered comparable cases" is context, and it changes everything.</p>
 <h3 id="01-the-interview-the-worked-example"><span class="secno">1.6</span> The worked example<span class="comp comp-exercise">Exercise</span></h3>
-<p>An invented company, a real procedure. <strong>Hartmann Verpackungstechnik GmbH</strong>, 40 employees, family-owned, makes folding cartons. Customer: <strong>Nordfrucht GmbH</strong>, six years. One delivery is unusable.</p>
+<p>An invented company, a real procedure. <strong>Hartmann Verpackungstechnik GmbH</strong>, 80 employees, family-owned, makes folding cartons. Customer: <strong>Nordfrucht GmbH</strong>, six years. One delivery is unusable.</p>
 <p>The customer's email:</p>
 <blockquote><p>Dear Sir or Madam, the delivery that arrived today (order 24-1187) is unusable. The print register is visibly out of alignment and the cartons will not fold up cleanly on our line. We have had to stop packing. We expect a complete replacement and a statement on how you intend to settle the downtime. Our delivery date to the retail chain is Friday. Kind regards, M. Brandt, Nordfrucht GmbH</p></blockquote>
 <p>Four passes. Each one adds <strong>one</strong> part; nothing is taken away. Work through them yourself — reading is not enough.</p>
@@ -322,7 +336,7 @@ footer .reviewed{font-weight:600;color:var(--ink-2)}
 <p>The result reads cleanly and would suit any business on earth. <strong>Here is the trap:</strong> it looks good enough that most people stop. You still couldn't send it.</p>
 <h4 id="01-the-interview-pass-2-plus-task-context-and-background-data">Pass 2 — plus Task context and Background data</h4>
 <pre><code>You are replying on behalf of Hartmann Verpackungstechnik GmbH: family-owned,
-40 employees, we make folding cartons for food producers. Nordfrucht has been a
+80 employees, we make folding cartons for food producers. Nordfrucht has been a
 customer for six years and we have never had any serious problems.
 
 What happened internally: during a tooling change on 11 March, the print register
@@ -357,7 +371,7 @@ For the downtime we are crediting you €1,400.
 Call me if Wednesday is too late.
 Kind regards, Andrea Hartmann, Sales&quot;</code></pre>
 <p>Now it sounds like Andrea Hartmann. Short sentences, direct address, the phone-call line at the end.</p>
-<blockquote><p><strong>The candidate has not got better. The question has got better.</strong></p></blockquote>
+<aside class="newhire"><span class="newhire-tag">New hire</span><p>The candidate has not got better. The question has got better.</p></aside>
 <h4 id="01-the-interview-two-moves-that-have-nothing-to-do-with-wording">Two moves that have nothing to do with wording</h4>
 <p><strong>Order.</strong> Long documents at the beginning, your question at the end. Anthropic reports up to 30 % better answer quality in tests for this, especially with several documents. Checkable, immediately applicable — and the opposite of prompt magic.</p>
 <p><strong>Brevity.</strong> The smallest prompt that works is the best one. Anthropic explicitly recommends against over-engineering.</p>

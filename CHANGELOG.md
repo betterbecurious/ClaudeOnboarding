@@ -2,6 +2,16 @@
 
 What changed, when, and why. Review entries are logged even when nothing changed — "reviewed, no changes" is information.
 
+## 2026-09-25 — The analogy gets its own box; Hartmann has 80 employees
+
+The employment analogy helps a reader keep their place in the course, but it was mixed into the method: the table of prompt parts had a column "In the interview", and several sentences only made sense through the hiring picture. A reader learning what goes into a prompt should not be thinking about job-interview questions. Same change as in the Tbilisi workshop pages, so both use one convention.
+
+- `build-site.py` — new convention: a blockquote whose first line starts with `**New hire:**` renders as a separate box in its own colour (sage, light and dark), labelled "New hire". On GitHub it still reads as a quote.
+- `docs/01-the-interview.md` — analogy sentences moved into New hire boxes, wording unchanged: "Nobody runs an interview…", "They simply interviewed badly.", the "look friendly" comparison, and "The candidate has not got better. The question has got better." The table of the four prompt parts lost its "In the interview" column; the column's content is now one New hire box under the table.
+- `docs/01-the-interview.md` — Hartmann Verpackungstechnik GmbH now has **80** employees instead of 40, in the example description and in the pass 2 prompt. Matches the workshop material.
+- `docs/00-intro.md` — *How you work with it* explains the New hire box.
+- `Last reviewed` unchanged: this is an edit, not a full review.
+
 ## 2026-08-10 — Two-part section numbers, and exercises marked
 
 Sections are numbered again, but hierarchically: **`<station>.<section>`**. `1.4` is the fourth section of Station 1. This composes instead of colliding — the earlier bare `4.` could be read as Station 4 or as loop step 4, whereas a two-part number cannot be mistaken for a station number. The wall of unnumbered headings was also simply hard to scan.

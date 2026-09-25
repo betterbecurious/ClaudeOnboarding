@@ -224,12 +224,18 @@ def render(lines, heading_offset=1, slug_prefix="", numbers=None, exercises=None
             out.append("".join(t))
             continue
 
-        # Blockquote
+        # Blockquote. One opening with **New hire:** is the analogy, kept apart
+        # from the method: it renders as its own box, never as body text.
         if stripped.startswith(">"):
             body = []
             while i < n and lines[i].strip().startswith(">"):
                 body.append(re.sub(r"^>\s?", "", lines[i].strip()))
                 i += 1
+            if body and body[0].startswith("**New hire:**"):
+                body[0] = body[0][len("**New hire:**"):].strip()
+                out.append('<aside class="newhire"><span class="newhire-tag">New hire</span>%s</aside>'
+                           % render(body, heading_offset, slug_prefix, numbers, exercises))
+                continue
             out.append("<blockquote>%s</blockquote>"
                        % render(body, heading_offset, slug_prefix, numbers, exercises))
             continue
@@ -413,6 +419,7 @@ CSS = """
   --description:#2f5d8a; --description-bg:#e4eef7;
   --discernment:#6a4a86; --discernment-bg:#efe8f6;
   --diligence:#3d6b4a; --diligence-bg:#e5f0e8;
+  --newhire:#3d5440; --newhire-bg:#e7ece2; --newhire-rule:#cfd9c8;
 }
 @media (prefers-color-scheme:dark){
   :root{
@@ -423,6 +430,7 @@ CSS = """
     --description:#8fb8dd; --description-bg:#1b2a38;
     --discernment:#b79ad6; --discernment-bg:#2a2136;
     --diligence:#8dc39d; --diligence-bg:#1c2f23;
+    --newhire:#b9ccb3; --newhire-bg:#1f2820; --newhire-rule:#34432f;
   }
 }
 html{scroll-behavior:smooth;scroll-padding-top:1.5rem;-webkit-text-size-adjust:100%}
@@ -494,6 +502,13 @@ pre code{background:none;padding:0;font-size:.83rem;line-height:1.55}
 blockquote{margin:0 0 1.25rem;padding:.1rem 0 .1rem 1.1rem;
   border-left:2px solid var(--rule);color:var(--ink-2)}
 blockquote p:last-child{margin-bottom:0}
+/* the employment analogy, always in the same box and colour, never mixed into the method */
+.newhire{margin:0 0 1.35rem;padding:.8rem 1.05rem .85rem;border-radius:8px;
+  background:var(--newhire-bg);border:1px solid var(--newhire-rule);color:var(--newhire);
+  font-style:italic}
+.newhire p{margin:0 0 .5rem}.newhire p:last-child{margin-bottom:0}
+.newhire-tag{display:block;margin-bottom:.35rem;font-style:normal;font-size:.7rem;font-weight:650;
+  letter-spacing:.09em;text-transform:uppercase}
 hr{border:0;border-top:1px solid var(--rule);margin:3rem 0}
 .table-wrap{overflow-x:auto;margin:0 0 1.35rem;
   -webkit-overflow-scrolling:touch}

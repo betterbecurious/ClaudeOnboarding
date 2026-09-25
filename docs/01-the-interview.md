@@ -6,13 +6,17 @@
 
 ## What this is about
 
-Nobody runs an interview without knowing what they are hiring for. So this station is about your work first, and about Claude second.
+This station is about your work first, and about Claude second.
+
+> **New hire:** Nobody runs an interview without knowing what they are hiring for.
 
 The sentence this station turns on:
 
 > Ask badly and you get bad answers — and then you mistake that for a verdict on the candidate.
 
-That is the diagnosis for half the market. People type something arbitrary, get something arbitrary back, and conclude the whole thing is worthless. They simply interviewed badly.
+That is the diagnosis for half the market. People type something arbitrary, get something arbitrary back, and conclude the whole thing is worthless.
+
+> **New hire:** They simply interviewed badly.
 
 ## What you can do afterwards
 
@@ -73,12 +77,14 @@ Ten components. The terms are kept in the original here so that you can look the
 
 ### The four that carry ordinary office work
 
-| Part | What belongs in it | In the interview |
-| --- | --- | --- |
-| **Task context** | Who you are, what kind of business, what role Claude is taking | Describing the situation |
-| **Background data** | Documents and facts Claude could not possibly know | Putting the file on the table |
-| **Detailed task description and rules** | The task plus the limits: length, tone, what must not appear | Saying what you'll be judging on |
-| **Examples** | A real earlier solution from your own house | Showing how things are done here |
+| Part | What belongs in it |
+| --- | --- |
+| **Task context** | Who you are, what kind of business, what role Claude is taking |
+| **Background data** | Documents and facts Claude could not possibly know |
+| **Detailed task description and rules** | The task plus the limits: length, tone, what must not appear |
+| **Examples** | A real earlier solution from your own house |
+
+> **New hire:** In the interview, the same four parts are describing the situation, putting the file on the table, saying what you'll be judging on, and showing how things are done here.
 
 The rest is for developers, or rarely needed.
 
@@ -87,7 +93,9 @@ The rest is for developers, or rarely needed.
 > **Context is what Claude could not possibly know.
 > Hand-holding is how it should think.**
 
-"Reply professionally and empathetically in three paragraphs" is hand-holding — in an interview that is the equivalent of instructing someone to look friendly. It costs space and changes little.
+"Reply professionally and empathetically in three paragraphs" is hand-holding. It costs space and changes little.
+
+> **New hire:** In an interview, that is the equivalent of instructing someone to look friendly.
 
 "The customer has been with us for six years, our goodwill limit is X, this is how we answered comparable cases" is context, and it changes everything.
 
@@ -97,7 +105,7 @@ The rest is for developers, or rarely needed.
 
 `Exercise`
 
-An invented company, a real procedure. **Hartmann Verpackungstechnik GmbH**, 40 employees, family-owned, makes folding cartons. Customer: **Nordfrucht GmbH**, six years. One delivery is unusable.
+An invented company, a real procedure. **Hartmann Verpackungstechnik GmbH**, 80 employees, family-owned, makes folding cartons. Customer: **Nordfrucht GmbH**, six years. One delivery is unusable.
 
 The customer's email:
 
@@ -123,7 +131,7 @@ The result reads cleanly and would suit any business on earth. **Here is the tra
 
 ```
 You are replying on behalf of Hartmann Verpackungstechnik GmbH: family-owned,
-40 employees, we make folding cartons for food producers. Nordfrucht has been a
+80 employees, we make folding cartons for food producers. Nordfrucht has been a
 customer for six years and we have never had any serious problems.
 
 What happened internally: during a tooling change on 11 March, the print register
@@ -171,7 +179,7 @@ Kind regards, Andrea Hartmann, Sales"
 
 Now it sounds like Andrea Hartmann. Short sentences, direct address, the phone-call line at the end.
 
-> **The candidate has not got better. The question has got better.**
+> **New hire:** The candidate has not got better. The question has got better.
 
 ### Two moves that have nothing to do with wording
 
