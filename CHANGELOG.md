@@ -2,6 +2,11 @@
 
 What changed, when, and why. Review entries are logged even when nothing changed — "reviewed, no changes" is information.
 
+## 2026-09-26 — Timesheets example removed
+
+- `docs/01-the-interview.md` — removed the row "Typed up the timesheets | The whole row" from the three-column table. The course is aimed at managing directors and the self-employed, who rarely have a purely mechanical task like this; the paragraph after the table already says a nearly empty left column is normal. Same decision as in the Tbilisi workshop.
+- `Last reviewed` unchanged: this is an edit, not a full review.
+
 ## 2026-09-25 — The analogy gets its own box; "briefing" instead of "interview guide"; Hartmann has 80 employees
 
 The employment analogy helps a reader keep their place in the course, but it was mixed into the method: the table of prompt parts had a column "In the interview", and several sentences only made sense through the hiring picture. A reader learning what goes into a prompt should not be thinking about job-interview questions. Same change as in the Tbilisi workshop pages, so both use one convention.

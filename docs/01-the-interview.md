@@ -47,7 +47,6 @@ Ten to twelve lines. Then sort them — into **three** columns, not two:
 | --- | --- | --- | --- |
 | Wrote the quote for Meier | Copying prices out of the list, formatting | Digging out comparable quotes from past years | What discount you give |
 | Answered a complaint | — | Pulling together the delivery history and earlier replies | How accommodating you are |
-| Typed up the timesheets | The whole row | — | — |
 | Checked six supplier quotes | — | Price, lead time, warranty into one comparison table | Who gets the order |
 | Went through job applications | — | Matching CVs against the requirements | Who you invite |
 | Produced the monthly report | Merging figures from three exports | Flagging what stands out against last month | What is worth reporting |
