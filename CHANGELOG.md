@@ -10,6 +10,7 @@ In the employment analogy, working out what you would hand over is deciding whom
 - `docs/01-the-interview.md` — competencies Description · Discernment. Starts with "Ask badly…" and "They simply interviewed badly." *Before you start*, *Try it yourself* and *What you keep* point to the list from Station 0. The anchor `#01-the-interview-what-are-you-actually-handing-over` becomes `#00-intro-what-are-you-actually-handing-over`.
 - `docs/00-intro.md` — "splits the line instead of assigning the whole of it" replaced by a concrete example (the complaint: Claude gathers the delivery history, the decision stays with you). The phrase was too abstract to act on.
 - "Mark exactly three rows" is now "Mark three rows"; "That is exactly why" in *What goes wrong* is now "That is why". The intensifier added nothing.
+- `docs/01-the-interview.md` — "The four that carry ordinary office work" is now **The briefing canvas**: four fields you fill in every time. "Ordinary office work" read as a put-down, and "four parts" carried no weight. *Try it yourself* and the New hire box use the same word; anchor `#…the-four-that-carry-ordinary-office-work` changes.
 - `build-site.py` — Station 0 is numbered too (0.1, 0.2 …), so its exercise shows a number; spine starts "Who we're hiring".
 - `README.md` — course pages table and the "start here" line.
 - `Last reviewed` unchanged: this is an edit, not a full review.

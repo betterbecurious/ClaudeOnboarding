@@ -35,16 +35,18 @@ Anthropic lists the components of a prompt individually, with a recommended orde
 
 Ten components. The terms are kept in the original here so that you can look them up. For the current version, always go to [Anthropic](https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview).
 
-### The four that carry ordinary office work
+### The briefing canvas
 
-| Part | What belongs in it |
+For most day-to-day business tasks, four of the ten carry the load. Treat them as four fields you fill in every time:
+
+| Field | What belongs in it |
 | --- | --- |
 | **Task context** | Who you are, what kind of business, what role Claude is taking |
 | **Background data** | Documents and facts Claude could not possibly know |
 | **Detailed task description and rules** | The task plus the limits: length, tone, what must not appear |
 | **Examples** | A real earlier solution from your own house |
 
-> **New hire:** In the interview, the same four parts are describing the situation, putting the file on the table, saying what you'll be judging on, and showing how things are done here.
+> **New hire:** In the interview, the same four fields are describing the situation, putting the file on the table, saying what you'll be judging on, and showing how things are done here.
 
 The rest is for developers, or rarely needed.
 
@@ -177,7 +179,7 @@ Out of that come the three habits:
 
 `Exercise`
 
-Write a briefing for **one of the three rows you marked in Station 0**. Four parts, on paper or in an editor.
+Write a briefing for **one of the three rows you marked in Station 0**. Fill in the four fields of the canvas, on paper or in an editor.
 
 ```
 Task context:
