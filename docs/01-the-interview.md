@@ -237,7 +237,7 @@ Apply the same briefing three times to different material of your own, and note 
 
 **No example.** The part almost everybody leaves out, and the one that changes the tone most.
 
-**The fluency error.** A fluently written answer is taken for a correct one. That is exactly why **Don't believe it — interrogate it** sits in the middle of this station rather than at the end: it belongs to the routine, not to the final inspection.
+**The fluency error.** A fluently written answer is taken for a correct one. That is why **Don't believe it — interrogate it** sits in the middle of this station rather than at the end: it belongs to the routine, not to the final inspection.
 
 ## What you keep
 

@@ -107,7 +107,7 @@ The middle column solves that. Few tasks go to Claude whole: you split them. In 
 
 If your left column is nearly empty and your middle one nearly full: normal. Among the self-employed and in management that is the rule. It does not mean there is nothing here for you.
 
-**Mark exactly three rows.** No more. Without a limit you write down your entire profession and take away nothing concrete. Choosing is the exercise.
+**Mark three rows.** No more. Without a limit you write down your entire profession and take away nothing concrete. Choosing is the exercise.
 
 Keep the list. Station 1 starts from it.
 
