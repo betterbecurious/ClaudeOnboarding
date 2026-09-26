@@ -152,11 +152,13 @@ Now it sounds like Andrea Hartmann. Short sentences, direct address, the phone-c
 
 > **New hire:** The candidate has not got better. The question has got better.
 
-### Two moves that have nothing to do with wording
+### Two habits that still matter
 
-**Order.** Long documents at the beginning, your question at the end. Anthropic recommends this, especially when there are several documents. Checkable, immediately applicable — and the opposite of prompt magic.
+**Say why.** A rule with its reason works better than the bare rule. "Under 150 words" is a rule; "under 150 words, Mr Brandt reads this on his phone at the packing line" lets Claude get the rest right too: short sentences, the date up front. Anthropic's own guidance puts it this way: Claude is smart enough to generalise from the explanation.
 
-**Brevity.** The smallest prompt that works is the best one. Anthropic explicitly recommends against over-engineering.
+**The colleague test.** Before you send a prompt, imagine handing it to a colleague who knows nothing about the case. If they would be confused, Claude will be too. This is Anthropic's "golden rule" for prompts.
+
+What no longer needs a rule of its own: the order of document and question. Anthropic still recommends putting long material first and the question last, but only for very long inputs, dozens of pages. For an email, it makes no difference.
 
 ---
 
