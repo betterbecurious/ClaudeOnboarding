@@ -1,6 +1,6 @@
-# Introduction
+# Station 0 — Who Are We Hiring?
 
-[← Index](../README.md)
+`Competencies: Delegation` · [← Index](../README.md)
 
 ---
 
@@ -30,7 +30,7 @@ There are no technical prerequisites. There is one substantive prerequisite: you
 
 ## How you work with it
 
-Every station has the same skeleton. Sections are numbered by station — **1.4** is the fourth section of Station 1 — so a number always tells you both where you are and which station you are in.
+Stations 1 to 5 share the same skeleton. Sections are numbered by station — **1.4** is the fourth section of Station 1 — so a number always tells you both where you are and which station you are in. Station 0, this page, is the exception: it sets the course up and ends with a single exercise.
 
 The employment analogy is there to help you find your way, not to teach the method. Wherever it appears, it sits in its own box marked **New hire**, apart from the text around it. Read the box for orientation; read everything else for what to do.
 
@@ -46,7 +46,7 @@ These headings appear in every station, in this order:
 - **What goes wrong** — the mistakes to expect, so you recognise them in your own work
 - **What you keep** — something you hold on to and can show
 
-Between them sit the sections belonging to that station alone — in Station 1, working out what you actually hand over, and how to write a briefing.
+Between them sit the sections belonging to that station alone — in Station 1, how to write a briefing.
 
 **On your own material** is not optional. Anyone who only clicks through the examples has watched.
 
@@ -58,7 +58,7 @@ This course is about Claude, so Claude is also the marker. Every station comes w
 
 A Claude account and a browser. This course deliberately does not say which plan unlocks which feature — that changes, and a page that pins it down is wrong within a quarter. Where the plan matters, you are pointed at [Anthropic's documentation](https://docs.claude.com/).
 
-On top of that: one real, uncritical document from your everyday work. Not a customer contract containing personal data. When in doubt, anonymise it or use the example material.
+On top of that: paper and a pen for the exercise below, and one real, uncritical document from your everyday work. Not a customer contract containing personal data. When in doubt, anonymise it or use the example material.
 
 ## The four competencies
 
@@ -70,6 +70,46 @@ Running across all five stations are four abilities that Anthropic, together wit
 - **Diligence** — taking responsibility for what happens with it
 
 Every station states at the top which of them it trains. At the end there is a self-check. Anyone who skips Delegation sits in front of an empty field in Station 2 and doesn't know what it is for.
+
+## What are you actually handing over?
+
+`Exercise`
+
+This part is about your work first, and about Claude second.
+
+> **New hire:** Nobody runs an interview without knowing what they are hiring for.
+
+Write down what you did **last week**. And write it so that somebody could have watched you do it: verbs, not abstract nouns.
+
+- ❌ "Progressed the company formation"
+- ✅ "Read through the draft articles of association"
+
+That precision is not pedantry. Intentions cannot be broken into parts; activities can. Anyone who writes down project names gets stuck at the sorting stage and wrongly takes that for a problem with their profession.
+
+It doesn't have to be management work. Everything you did at a desk counts: filed the expense report, prepared the meeting with the tax advisor, answered a letter from an authority, compared two insurance quotes, wrote a job ad.
+
+Ten to twelve lines. Then sort them — into **three** columns, not two:
+
+| What you did | Mechanical | Groundwork | Decision |
+| --- | --- | --- | --- |
+| Wrote the quote for Meier | Copying prices out of the list, formatting | Digging out comparable quotes from past years | What discount you give |
+| Answered a complaint | — | Pulling together the delivery history and earlier replies | How accommodating you are |
+| Checked six supplier quotes | — | Price, lead time, warranty into one comparison table | Who gets the order |
+| Went through job applications | — | Matching CVs against the requirements | Who you invite |
+| Produced the monthly report | Merging figures from three exports | Flagging what stands out against last month | What is worth reporting |
+| Reviewed a framework agreement | — | Marking deviations from your standard terms | Sign or renegotiate |
+
+**Why three columns.** With two — "I can hand this over" and "I can't hand this over" — you notice on almost every line that a judgement is buried in there somewhere, push everything to the right, and walk away with the feeling that this doesn't work for your kind of job.
+
+The middle column solves that, because it **splits the line** instead of assigning the whole of it.
+
+> **You are not handing over the decision. You are handing over the groundwork.**
+
+If your left column is nearly empty and your middle one nearly full: normal. Among the self-employed and in management that is the rule. It does not mean there is nothing here for you.
+
+**Mark exactly three rows.** No more. Without a limit you write down your entire profession and take away nothing concrete. Choosing is the exercise.
+
+Keep the list. Station 1 starts from it.
 
 ---
 

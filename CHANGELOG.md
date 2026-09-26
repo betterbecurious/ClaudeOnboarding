@@ -2,6 +2,16 @@
 
 What changed, when, and why. Review entries are logged even when nothing changed — "reviewed, no changes" is information.
 
+## 2026-09-26 — Station 0: deciding what to hand over comes before the interview
+
+In the employment analogy, working out what you would hand over is deciding whom to hire, not interviewing. Station 1 mixed both. The exercise now lives in the introduction, which becomes Station 0 — Who Are We Hiring?; Station 1 is only about asking well. Same split as in the Tbilisi workshop.
+
+- `docs/00-intro.md` — title **Station 0 — Who Are We Hiring?**, competency Delegation. Gains the exercise *What are you actually handing over?* from Station 1, unchanged, plus its opening line ("about your work first") and the New hire box "Nobody runs an interview without knowing what they are hiring for." New in the exercise: a paragraph that it doesn't have to be management work, with everyday examples. *How you work with it* and *What you need* adjusted (Station 0 is the exception to the skeleton; paper and pen).
+- `docs/01-the-interview.md` — competencies Description · Discernment. Starts with "Ask badly…" and "They simply interviewed badly." *Before you start*, *Try it yourself* and *What you keep* point to the list from Station 0. The anchor `#01-the-interview-what-are-you-actually-handing-over` becomes `#00-intro-what-are-you-actually-handing-over`.
+- `build-site.py` — Station 0 is numbered too (0.1, 0.2 …), so its exercise shows a number; spine starts "Who we're hiring".
+- `README.md` — course pages table and the "start here" line.
+- `Last reviewed` unchanged: this is an edit, not a full review.
+
 ## 2026-09-26 — Timesheets example removed
 
 - `docs/01-the-interview.md` — removed the row "Typed up the timesheets | The whole row" from the three-column table. The course is aimed at managing directors and the self-employed, who rarely have a purely mechanical task like this; the paragraph after the table already says a nearly empty left column is normal. Same decision as in the Tbilisi workshop.

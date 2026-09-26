@@ -57,7 +57,7 @@ COURSE = [
 
 COMPETENCIES = ["Delegation", "Description", "Discernment", "Diligence"]
 
-SPINE = "Intro → Interview → Onboarding → First workday → Tools → Promotion"
+SPINE = "Who we're hiring → Interview → Onboarding → First workday → Tools → Promotion"
 
 
 # --------------------------------------------------------------------------
@@ -349,13 +349,11 @@ def load_page(path, slug):
     # Sections are numbered <station>.<n>. The station number comes from the
     # filename, so "01-the-interview" gives 1.1, 1.2, ... A two-part number is
     # unambiguous in a way a bare "4" was not: it cannot be confused with a
-    # station number. The introduction is station 00 and stays unnumbered --
-    # it is not a station and has no exercises.
+    # station number. Station 0 ("Who Are We Hiring?") is numbered too: 0.1, 0.2 ...
     station = int(slug[:2])
     numbers = {}
-    if station:
-        for n, (suffix, _) in enumerate(sections, start=1):
-            numbers[slug + "-" + suffix] = "%d.%d" % (station, n)
+    for n, (suffix, _) in enumerate(sections, start=1):
+        numbers[slug + "-" + suffix] = "%d.%d" % (station, n)
     exercises = {slug + "-" + s for s in exercise_suffixes}
 
     # offset 1: the page's "## What this is about" becomes h3 under the

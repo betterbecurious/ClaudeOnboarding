@@ -1,14 +1,10 @@
 # Station 1 — The Interview
 
-`Competencies: Delegation · Description · Discernment` · [← Index](../README.md)
+`Competencies: Description · Discernment` · [← Index](../README.md)
 
 ---
 
 ## What this is about
-
-This station is about your work first, and about Claude second.
-
-> **New hire:** Nobody runs an interview without knowing what they are hiring for.
 
 The sentence this station turns on:
 
@@ -20,47 +16,12 @@ That is the diagnosis for half the market. People type something arbitrary, get 
 
 ## What you can do afterwards
 
-- Pull out of your own week the tasks that are candidates at all
 - Hand over a task in a way that produces a usable result
 - Check an answer instead of believing it
 
 ## Before you start
 
-Put paper in front of you and have one real, uncritical document from your everyday work ready — a quote, a report, an extract from a manual, a contract with no personal data in it.
-
----
-
-## What are you actually handing over?
-
-`Exercise`
-
-Write down what you did **last week**. And write it so that somebody could have watched you do it: verbs, not abstract nouns.
-
-- ❌ "Progressed the company formation"
-- ✅ "Read through the draft articles of association"
-
-That precision is not pedantry. Intentions cannot be broken into parts; activities can. Anyone who writes down project names gets stuck at the sorting stage and wrongly takes that for a problem with their profession.
-
-Ten to twelve lines. Then sort them — into **three** columns, not two:
-
-| What you did | Mechanical | Groundwork | Decision |
-| --- | --- | --- | --- |
-| Wrote the quote for Meier | Copying prices out of the list, formatting | Digging out comparable quotes from past years | What discount you give |
-| Answered a complaint | — | Pulling together the delivery history and earlier replies | How accommodating you are |
-| Checked six supplier quotes | — | Price, lead time, warranty into one comparison table | Who gets the order |
-| Went through job applications | — | Matching CVs against the requirements | Who you invite |
-| Produced the monthly report | Merging figures from three exports | Flagging what stands out against last month | What is worth reporting |
-| Reviewed a framework agreement | — | Marking deviations from your standard terms | Sign or renegotiate |
-
-**Why three columns.** With two — "I can hand this over" and "I can't hand this over" — you notice on almost every line that a judgement is buried in there somewhere, push everything to the right, and walk away with the feeling that this doesn't work for your kind of job.
-
-The middle column solves that, because it **splits the line** instead of assigning the whole of it.
-
-> **You are not handing over the decision. You are handing over the groundwork.**
-
-If your left column is nearly empty and your middle one nearly full: normal. Among the self-employed and in management that is the rule. It does not mean there is nothing here for you.
-
-**Mark exactly three rows.** No more. Without a limit you write down your entire profession and take away nothing concrete. Choosing is the exercise.
+Have your list from Station 0 in front of you, with its three marked rows, and one real, uncritical document from your everyday work ready — a quote, a report, an extract from a manual, a contract with no personal data in it.
 
 ---
 
@@ -216,7 +177,7 @@ Out of that come the three habits:
 
 `Exercise`
 
-Write a briefing for **one of your three marked rows**. Four parts, on paper or in an editor.
+Write a briefing for **one of the three rows you marked in Station 0**. Four parts, on paper or in an editor.
 
 ```
 Task context:
@@ -280,7 +241,6 @@ Apply the same briefing three times to different material of your own, and note 
 
 ## What you keep
 
-- Your list: last week, sorted, three rows marked
 - One completed briefing
 - The three checking habits
 
