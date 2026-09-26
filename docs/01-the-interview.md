@@ -55,7 +55,7 @@ The rest is for developers, or rarely needed.
 > **Context is what Claude could not possibly know.
 > Hand-holding is how it should think.**
 
-"Reply professionally and empathetically in three paragraphs" is hand-holding. It costs space and changes little.
+"Reply professionally and empathetically in three paragraphs" is hand-holding. Claude does that anyway, and nobody can check an adjective. It costs space and changes little. Tone does belong in a briefing when you want something other than the default — "firm, no apology, the fault is not ours" is a rule, not hand-holding.
 
 > **New hire:** In an interview, that is the equivalent of instructing someone to look friendly.
 
@@ -71,12 +71,20 @@ An invented company, a real procedure. **Hartmann Packaging GmbH**, 80 employees
 
 The customer's email:
 
+> **Subject:** Complaint order 24-1187 – cartons printed mirror-inverted, line stopped
+>
 > Dear Sir or Madam,
-> the delivery that arrived today (order 24-1187) is unusable. The print register is
-> visibly out of alignment and the cartons will not fold up cleanly on our line. We
-> have had to stop packing. We expect a complete replacement and a statement on how
-> you intend to settle the downtime. Our delivery date to the retail chain is Friday.
-> Kind regards, M. Brandt, Nordfrucht GmbH
+>
+> this morning we received your delivery for order 24-1187: 12,000 folding cartons "Nordfrucht Berry Mix 250 g", four pallets. We cannot use any of it.
+>
+> The print is mirror-inverted against the die cut. Once the cartons are erected, our logo and the product photo sit on the back panel, the front shows the ingredients list, and the EAN barcode ends up on the glue flap, where it is covered. The retail chain will not accept goods with an unreadable barcode.
+>
+> We noticed it after the first 400 cartons on line 2 and stopped packing at 07:40. Photos of an erected carton and of a flat blank are attached.
+>
+> We expect a complete replacement delivery, in time for our delivery date to the retail chain on Friday; collection of the faulty batch; and a statement by tomorrow midday on how you intend to settle the downtime.
+>
+> Kind regards,
+> M. Brandt, Head of Packaging, Nordfrucht GmbH
 
 Four passes. Each one adds **one** part; nothing is taken away. Work through them yourself — reading is not enough.
 
@@ -96,9 +104,10 @@ You are replying on behalf of Hartmann Packaging GmbH: family-owned,
 80 employees, we make folding cartons for food producers. Nordfrucht has been a
 customer for six years and we have never had any serious problems.
 
-What happened internally: during a tooling change on 11 March, the print register
-was not re-measured. The fault is ours. A replacement run is under way, earliest
-delivery Thursday midday.
+What happened internally: in prepress on 11 March, the new Nordfrucht artwork was
+placed on the die-cut layout mirrored. The press check compared colours, not panel
+positions, so nobody caught it. The fault is ours. A replacement run is under way,
+earliest delivery Thursday midday.
 
 Write a reply to this customer email:
 [customer email]
