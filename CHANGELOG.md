@@ -8,6 +8,7 @@ In the employment analogy, working out what you would hand over is deciding whom
 
 - `docs/00-intro.md` — title **Station 0 — Who Are We Hiring?**, competency Delegation. Gains the exercise *What are you actually handing over?* from Station 1, unchanged, plus its opening line ("about your work first") and the New hire box "Nobody runs an interview without knowing what they are hiring for." New in the exercise: a paragraph that it doesn't have to be management work, with everyday examples. *How you work with it* and *What you need* adjusted (Station 0 is the exception to the skeleton; paper and pen).
 - `docs/01-the-interview.md` — competencies Description · Discernment. Starts with "Ask badly…" and "They simply interviewed badly." *Before you start*, *Try it yourself* and *What you keep* point to the list from Station 0. The anchor `#01-the-interview-what-are-you-actually-handing-over` becomes `#00-intro-what-are-you-actually-handing-over`.
+- `docs/00-intro.md` — "splits the line instead of assigning the whole of it" replaced by a concrete example (the complaint: Claude gathers the delivery history, the decision stays with you). The phrase was too abstract to act on.
 - `build-site.py` — Station 0 is numbered too (0.1, 0.2 …), so its exercise shows a number; spine starts "Who we're hiring".
 - `README.md` — course pages table and the "start here" line.
 - `Last reviewed` unchanged: this is an edit, not a full review.

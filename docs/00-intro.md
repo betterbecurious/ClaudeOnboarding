@@ -101,7 +101,7 @@ Ten to twelve lines. Then sort them — into **three** columns, not two:
 
 **Why three columns.** With two — "I can hand this over" and "I can't hand this over" — you notice on almost every line that a judgement is buried in there somewhere, push everything to the right, and walk away with the feeling that this doesn't work for your kind of job.
 
-The middle column solves that, because it **splits the line** instead of assigning the whole of it.
+The middle column solves that. Few tasks go to Claude whole: you split them. In the complaint, Claude pulls together the delivery history; how accommodating you are stays with you.
 
 > **You are not handing over the decision. You are handing over the groundwork.**
 
