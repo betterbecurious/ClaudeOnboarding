@@ -20,7 +20,7 @@ The whole course on one page, in order.
 | 2 | The Onboarding | Set up a recurring task once, instead of explaining it again every time |
 | 3 | The First Real Workday | Turn unsorted material into finished work |
 | 4 | Tools and Access | Give access to real systems — and build yourself a tool |
-| 5 | The Promotion | Write a standard that holds across several tasks |
+| 5 | The Promotion | Turn how you work into a standard Claude applies everywhere |
 
 Unlike a reference, there is an order here, and it is not decorative. Station 3 assumes you have done Station 2.
 

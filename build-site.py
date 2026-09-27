@@ -52,7 +52,7 @@ COURSE = [
      "pending": "Give access to real systems — and build yourself a tool."},
     {"slug": "05-promotion",
      "nav": "Station 5 — The Promotion",
-     "pending": "Write a standard that holds across several tasks."},
+     "pending": "Turn how you work into a standard Claude applies everywhere."},
 ]
 
 COMPETENCIES = ["Delegation", "Description", "Discernment", "Diligence"]

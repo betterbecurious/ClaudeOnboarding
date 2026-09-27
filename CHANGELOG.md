@@ -2,6 +2,11 @@
 
 What changed, when, and why. Review entries are logged even when nothing changed — "reviewed, no changes" is information.
 
+## 2026-09-27 — Station 5 promise
+
+- `README.md`, `build-site.py` — Station 5 now promises "Turn how you work into a standard Claude applies everywhere" instead of "Write a standard that holds across several tasks". The old wording read as if a skill were only a style guide; a skill is a procedure with reference files and scripts. Same change as in the Tbilisi workshop.
+- `Last reviewed` unchanged: this is an edit, not a full review.
+
 ## 2026-09-26 — Station 0: deciding what to hand over comes before the interview
 
 In the employment analogy, working out what you would hand over is deciding whom to hire, not interviewing. Station 1 mixed both. The exercise now lives in the introduction, which becomes Station 0 — Who Are We Hiring?; Station 1 is only about asking well. Same split as in the Tbilisi workshop.
